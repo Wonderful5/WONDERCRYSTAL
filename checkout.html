@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | DAMSAM Food Wurld - Secure Ordering</title>
+  <meta name="description" content="Complete your online food order from DAMSAM Food Wurld. Fast delivery across Lekki Phase 1, Victoria Island, and Ikoyi.">
+  <meta name="theme-color" content="#D32323">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23D32323'/><text x='50%' y='68%' font-size='56' font-weight='900' fill='white' text-anchor='middle' font-family='sans-serif'>D</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/damsam.css">
+</head>
+<body data-page="checkout">
+
+  <div class="top-notice-bar">
+    <div class="container">
+      <div class="notice-left">
+        <span class="notice-item"><i class="fa-solid fa-phone"></i> CALL: <strong>+234 803 456 7890</strong></span>
+        <span class="notice-item"><i class="fa-solid fa-clock"></i> Mon – Sun: 8:00 AM – 10:30 PM</span>
+      </div>
+      <div class="notice-right">
+        <span class="notice-item"><i class="fa-solid fa-truck-fast"></i> <span class="notice-badge">FREE DELIVERY</span> Orders over ₦25,000</span>
+        <span class="notice-item"><i class="fa-solid fa-shield-halved"></i> 256-Bit SSL Encrypted Checkout</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="site-logo">
+        <span class="logo-main">DAMSAM</span>
+        <span class="logo-sub">FOOD WURLD</span>
+      </a>
+
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="reservations.html" class="nav-link">Reservations</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn-trigger" aria-label="View Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" style="display: none;">0</span>
+        </button>
+        <button class="hamburger-btn" aria-label="Open Mobile Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="site-logo"><span class="logo-main">DAMSAM</span><span class="logo-sub">FOOD WURLD</span></a>
+      <button class="close-mobile-nav close-drawer-btn"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html"><span>Home</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="menu.html"><span>Menu</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="about.html"><span>About</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="gallery.html"><span>Gallery</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="offers.html"><span>Offers</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="reservations.html"><span>Reservations</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="contact.html"><span>Contact</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="track-order.html"><span>Track Order</span> <i class="fa-solid fa-angle-right"></i></a></li>
+    </ul>
+  </aside>
+
+  <!-- CHECKOUT SECTION (Section 16 & 42) -->
+  <section style="padding: 50px 0 90px; background: var(--bg-cream);">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 30px;">
+        <span class="section-label"><i class="fa-solid fa-lock"></i> FAST & SECURE ORDERING</span>
+        <h1 class="section-title">CHECKOUT</h1>
+        <div class="red-divider-rule"><span class="red-divider-dot"></span></div>
+        <p class="section-subtitle">Complete your details below to have hot, fresh meals delivered or ready for pickup.</p>
+      </div>
+
+      <!-- Step Indicator Bar -->
+      <div class="checkout-steps-bar">
+        <div class="step-node active" data-step="1">
+          <span class="step-number">1</span>
+          <span>Contact</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-node" data-step="2">
+          <span class="step-number">2</span>
+          <span>Delivery</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-node" data-step="3">
+          <span class="step-number">3</span>
+          <span>Payment</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-node" data-step="4">
+          <span class="step-number">4</span>
+          <span>Review</span>
+        </div>
+      </div>
+
+      <div class="checkout-grid">
+        <!-- Main Form Step Card -->
+        <div class="checkout-card">
+          <!-- STEP 1: Customer Info -->
+          <div class="checkout-step-pane" id="step-pane-1">
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--secondary-charcoal); margin-bottom: 20px;">
+              Step 1: Your Contact Information
+            </h3>
+
+            <div class="form-group">
+              <label class="form-label" for="cust-name">Full Name *</label>
+              <input type="text" id="cust-name" class="form-control" placeholder="e.g. Babatunde Alabi" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="cust-phone">Phone Number (For Delivery Calls) *</label>
+                <input type="tel" id="cust-phone" class="form-control" placeholder="e.g. +234 803 123 4567" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="cust-email">Email Address (For Order Receipt) *</label>
+                <input type="email" id="cust-email" class="form-control" placeholder="e.g. babatunde@example.com" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: Order Method & Delivery Address -->
+          <div class="checkout-step-pane" id="step-pane-2" style="display: none;">
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--secondary-charcoal); margin-bottom: 20px;">
+              Step 2: Order Method & Location
+            </h3>
+
+            <div class="radio-pill-group">
+              <label class="radio-pill selected">
+                <input type="radio" name="order_type" value="delivery" checked style="accent-color: var(--primary-red);">
+                <div>
+                  <strong>Doorstep Delivery</strong>
+                  <p style="font-size: 0.78rem; color: var(--charcoal-light);">Speedy delivery to home/office</p>
+                </div>
+              </label>
+
+              <label class="radio-pill">
+                <input type="radio" name="order_type" value="pickup" style="accent-color: var(--primary-red);">
+                <div>
+                  <strong>Restaurant Pickup</strong>
+                  <p style="font-size: 0.78rem; color: var(--charcoal-light);">Pick up at Plot 14 Admiralty Way</p>
+                </div>
+              </label>
+            </div>
+
+            <div id="delivery-address-group">
+              <div class="form-group">
+                <label class="form-label" for="delivery-address">Street Address / Building Name *</label>
+                <input type="text" id="delivery-address" class="form-control" placeholder="e.g. Flat 4B, Emerald Court, Admiralty Way">
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="delivery-city">Area / District *</label>
+                  <select id="delivery-city" class="form-control">
+                    <option value="Lekki Phase 1" selected>Lekki Phase 1</option>
+                    <option value="Victoria Island">Victoria Island</option>
+                    <option value="Ikoyi">Ikoyi</option>
+                    <option value="Oniru">Oniru</option>
+                    <option value="Ajah">Ajah</option>
+                    <option value="Marina / Lagos Island">Marina / Lagos Island</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="delivery-landmark">Nearest Landmark (Optional)</label>
+                  <input type="text" id="delivery-landmark" class="form-control" placeholder="e.g. Near Ebeano Supermarket">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="delivery-instructions">Rider Instructions (Optional)</label>
+                <input type="text" id="delivery-instructions" class="form-control" placeholder="e.g. Call when outside the main gate, buzz flat 4B">
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Payment Method (Section 42) -->
+          <div class="checkout-step-pane" id="step-pane-3" style="display: none;">
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--secondary-charcoal); margin-bottom: 20px;">
+              Step 3: Select Payment Method
+            </h3>
+
+            <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px;">
+              <label class="radio-pill selected">
+                <input type="radio" name="payment_method" value="card" checked style="accent-color: var(--primary-red);">
+                <div>
+                  <strong>Debit / Credit Card (Online)</strong>
+                  <p style="font-size: 0.78rem; color: var(--charcoal-light);">Mastercard, Visa, Verve (Instant Confirmation)</p>
+                </div>
+              </label>
+
+              <label class="radio-pill">
+                <input type="radio" name="payment_method" value="bank_transfer" style="accent-color: var(--primary-red);">
+                <div>
+                  <strong>Direct Bank Transfer</strong>
+                  <p style="font-size: 0.78rem; color: var(--charcoal-light);">Transfer to our official Zenith Bank account</p>
+                </div>
+              </label>
+
+              <label class="radio-pill">
+                <input type="radio" name="payment_method" value="cash_on_delivery" style="accent-color: var(--primary-red);">
+                <div>
+                  <strong>Cash / POS on Delivery</strong>
+                  <p style="font-size: 0.78rem; color: var(--charcoal-light);">Pay rider with Cash or POS upon food handover</p>
+                </div>
+              </label>
+            </div>
+
+            <!-- Authentic Bank Transfer Details -->
+            <div id="bank-transfer-details-box" class="bank-details-box" style="display: none;">
+              <h4 style="font-size: 0.95rem; font-weight: 800; color: var(--primary-red); margin-bottom: 10px;">
+                <i class="fa-solid fa-building-columns"></i> DAMSAM Official Restaurant Account
+              </h4>
+              <div class="bank-row">
+                <span>Bank Name:</span>
+                <strong>Zenith Bank</strong>
+              </div>
+              <div class="bank-row">
+                <span>Account Name:</span>
+                <strong>DAMSAM Food Wurld Ltd</strong>
+              </div>
+              <div class="bank-row">
+                <span>Account Number:</span>
+                <strong style="color: var(--primary-red); font-size: 1.05rem;">1019842750</strong>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--charcoal-light); margin-top: 10px;">
+                * Please include your phone number as reference when making transfer.
+              </p>
+            </div>
+          </div>
+
+          <!-- STEP 4: Review & Place Order -->
+          <div class="checkout-step-pane" id="step-pane-4" style="display: none;">
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--secondary-charcoal); margin-bottom: 20px;">
+              Step 4: Review & Confirm Order
+            </h3>
+            <div id="checkout-review-content">
+              <!-- Dynamically populated by app.js -->
+            </div>
+          </div>
+
+          <!-- Navigation Controls -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-light);">
+            <button class="btn btn-light" id="checkout-prev-btn" style="display: none;">
+              <i class="fa-solid fa-arrow-left"></i> Back
+            </button>
+            <div style="margin-left: auto;">
+              <button class="btn btn-primary" id="checkout-next-btn">
+                Next Step <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button class="btn btn-primary btn-lg" id="place-order-final-btn" style="display: none;">
+                <i class="fa-solid fa-check"></i> PLACE ORDER NOW
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Summary Card -->
+        <div>
+          <div class="checkout-card" style="position: sticky; top: 100px;">
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--secondary-charcoal); margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between;">
+              <span>Order Summary</span>
+              <a href="menu.html" style="font-size: 0.82rem; color: var(--primary-red); font-weight: 700;">Edit Items</a>
+            </h3>
+
+            <div class="cart-summary-line">
+              <span>Subtotal</span>
+              <strong id="co-subtotal">₦0</strong>
+            </div>
+            <div class="cart-summary-line">
+              <span>Delivery Fee</span>
+              <strong id="co-delivery">₦1,500</strong>
+            </div>
+            <div class="cart-summary-line" style="color: var(--success-green);">
+              <span>Discounts</span>
+              <strong id="co-discount">₦0</strong>
+            </div>
+            <div class="cart-summary-line total">
+              <span>Total Payable</span>
+              <span class="total-amount" id="co-total">₦0</span>
+            </div>
+
+            <div style="background: var(--bg-cream); padding: 14px; border-radius: var(--radius-md); margin-top: 20px; font-size: 0.8125rem; color: var(--charcoal-muted); line-height: 1.5;">
+              <i class="fa-solid fa-shield-halved" style="color: var(--success-green); margin-right: 6px;"></i>
+              Orders are prepared fresh. You will receive an instant confirmation and live tracking link.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-bottom-bar" style="border-top: none;">
+      <div>© 2026 DAMSAM Food Wurld. All rights reserved. Plot 14, Admiralty Way, Lekki Phase 1, Lagos.</div>
+      <div class="footer-legal-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

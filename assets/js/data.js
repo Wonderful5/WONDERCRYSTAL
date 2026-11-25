@@ -1,352 +1,524 @@
 /**
- * WONDER GRAND — LUXURY FURNITURE DATA & CATALOG
- * Osun State, Nigeria
- * Complete collection across all 6 luxury categories
+ * DAMSAM Food Wurld - Master Data Source
+ * Authentic, reliable configuration, menu catalogue, offers, reviews, and gallery items.
  */
 
-const WONDER_GRAND_CONFIG = {
-  brandName: "Wonder Grand",
-  tagline: "Haute Furniture & Architectural Living",
-  location: "Osun State, Nigeria",
-  address: "Wonder Grand Atelier & Showroom, Plot 18 Heritage Boulevard, GRA, Osogbo, Osun State, Nigeria",
-  phoneDisplay: "+234 (0) 803 400 9000",
-  whatsappNumber: "+2348034009000",
-  emailConcierge: "concierge@wondergrand.com",
-  emailEnquiries: "atelier@wondergrand.com",
-  openingHours: "Monday – Saturday: 9:00 AM – 7:00 PM",
-  sundayHours: "Sunday: Private Appointments Only",
-  currencySymbol: "₦",
-  whiteGloveDeliveryThreshold: 5000000,
-  baseDeliveryFee: 45000
+const DAMSAM_CONFIG = {
+  name: "DAMSAM Food Wurld",
+  shortName: "DAMSAM",
+  tagline: "Good Food. Great Moments.",
+  subTagline: "FRESH • FLAVORFUL • MADE FOR YOU",
+  country: "Nigeria",
+  city: "Lagos",
+  address: "Plot 14, Admiralty Way, Lekki Phase 1, Lagos, Nigeria",
+  phone: "+234 803 456 7890",
+  altPhone: "+234 901 234 5678",
+  whatsapp: "+2348034567890",
+  whatsappDisplay: "+234 803 456 7890",
+  email: "orders@damsamfoodwurld.com",
+  inquiriesEmail: "hello@damsamfoodwurld.com",
+  currency: "₦",
+  currencyCode: "NGN",
+  openingHours: {
+    weekdays: "Monday – Thursday: 8:00 AM – 10:00 PM",
+    weekend: "Friday – Saturday: 8:00 AM – 11:30 PM",
+    sunday: "Sunday: 9:00 AM – 10:30 PM",
+    kitchenCloses: "Kitchen orders close 45 mins before closing"
+  },
+  delivery: {
+    baseFee: 1500,
+    freeDeliveryThreshold: 25000,
+    estimatedMinutes: "35 – 50 mins",
+    areas: ["Lekki Phase 1", "Ikoyi", "Victoria Island", "Oniru", "Ajah", "Marina"]
+  },
+  bankDetails: {
+    bankName: "Zenith Bank",
+    accountName: "DAMSAM Food Wurld Ltd",
+    accountNumber: "1019842750",
+    swiftCode: "ZEIBNGLA"
+  },
+  socialLinks: {
+    instagram: "https://instagram.com/damsamfoodwurld",
+    facebook: "https://facebook.com/damsamfoodwurld",
+    tiktok: "https://tiktok.com/@damsamfoodwurld",
+    twitter: "https://twitter.com/damsamfoodwurld"
+  }
 };
 
-// 6 Core Categories
-const FURNITURE_CATEGORIES = [
-  { id: "all", name: "All Collections", count: 18 },
-  { id: "living", name: "Living Room Furniture", count: 3 },
-  { id: "bedroom", name: "Bedroom Furniture", count: 3 },
-  { id: "dining", name: "Dining Room Furniture", count: 3 },
-  { id: "office", name: "Office Furniture", count: 3 },
-  { id: "outdoor", name: "Outdoor Furniture", count: 3 },
-  { id: "accessories", name: "Luxury Interior Accessories", count: 3 }
+const CATEGORIES = [
+  { id: "all", label: "ALL", icon: "fa-border-all" },
+  { id: "nigerian", label: "NIGERIAN", icon: "fa-bowl-food" },
+  { id: "african", label: "AFRICAN", icon: "fa-earth-africa" },
+  { id: "continental", label: "CONTINENTAL", icon: "fa-utensils" },
+  { id: "rice-pasta", label: "RICE & PASTA", icon: "fa-bowl-rice" },
+  { id: "chicken", label: "CHICKEN", icon: "fa-drumstick-bite" },
+  { id: "beef", label: "BEEF", icon: "fa-burger" },
+  { id: "seafood", label: "SEAFOOD", icon: "fa-fish" },
+  { id: "soups", label: "SOUPS", icon: "fa-mug-hot" },
+  { id: "snacks", label: "SNACKS", icon: "fa-cookie-bite" },
+  { id: "drinks", label: "DRINKS", icon: "fa-glass-water" },
+  { id: "desserts", label: "DESSERTS", icon: "fa-ice-cream" }
 ];
 
-// Curated 18 Luxury Furniture Items
-const FURNITURE_PRODUCTS = [
-  /* ==========================================================================
-     1. LIVING ROOM FURNITURE
-     ========================================================================== */
+const MENU_ITEMS = [
   {
-    id: "wg-liv-01",
-    name: "The Monolith Roman Travertine Coffee Table",
-    category: "living",
-    categoryLabel: "Living Room Furniture",
-    price: 1850000,
-    badge: "Signature Piece",
-    image: "assets/images/prod-travertine-table.jpg",
-    shortDesc: "Hand-honed raw Roman travertine coffee table with sculptural monolithic plinth base and natural vein detailing.",
-    description: "Carved from solid slabs of unpolished Roman travertine, the Monolith Coffee Table celebrates organic mass and architectural restraint. Each block is meticulously hand-honed by master artisans, preserving the porous, tactile character of the stone. Sealed with an invisible matte protective coat to resist patina while maintaining its ancient geological soul.",
-    dimensions: "140cm W × 85cm D × 38cm H",
-    materials: "100% Solid Natural Roman Travertine Stone",
-    finish: "Hand-honed raw matte travertine",
-    featured: true,
-    inStock: true
+    id: "ds-01",
+    name: "Jollof Rice & Grilled Chicken",
+    category: "rice-pasta",
+    mainCategory: "nigerian",
+    description: "Signature smoky Nigerian party jollof rice simmered in rich tomato-bell pepper reduction, served with succulent spiced quarter grilled chicken and golden fried sweet plantains (dodo).",
+    price: 8500,
+    image: "assets/images/jollof-chicken.jpg",
+    rating: 4.9,
+    reviewsCount: 142,
+    prepTime: "25-30 min",
+    calories: "780 kcal",
+    spicyLevel: 2,
+    isFeatured: true,
+    isChefSpecial: true,
+    isPopular: true,
+    available: true,
+    tags: ["Best Seller", "Signature", "Smoky Party Style"],
+    ingredients: ["Long grain parboiled rice", "Fresh tomatoes & rodo", "Grilled chicken", "Fried sweet plantain", "Herbal spices"],
+    addOns: [
+      { id: "extra-chicken", name: "Extra Quarter Grilled Chicken", price: 3200 },
+      { id: "fried-plantain", name: "Extra Fried Plantain (Dodo)", price: 1200 },
+      { id: "coleslaw", name: "Creamy Vegetable Coleslaw", price: 1000 },
+      { id: "chapman-can", name: "Chilled House Chapman (500ml)", price: 1800 }
+    ]
   },
   {
-    id: "wg-liv-02",
-    name: "Aurelia Minimalist Modular Bouclé Sectional",
-    category: "living",
-    categoryLabel: "Living Room Furniture",
-    price: 4950000,
-    badge: "Best Seller",
-    image: "assets/images/prod-boucle-sofa.jpg",
-    shortDesc: "Expansive low-profile modular sofa upholstered in textural Italian wool-blend bouclé with kiln-dried hardwood frame.",
-    description: "The Aurelia Sectional redefines low-profile lounging with deep proportions, subtle curved contours, and multi-density memory cushioning. Tailored in an exquisite oat-colored heavy bouclé weave imported from Biella, Italy, built over a reinforced solid FSC-certified kiln-dried hardwood frame.",
-    dimensions: "320cm W × 190cm D × 72cm H (Seat Height: 40cm)",
-    materials: "Kiln-Dried Walnut Frame, High-Resilience Down Blend, Italian Wool Bouclé",
-    finish: "Oat Neutral Bouclé Weave",
-    featured: true,
-    inStock: true
+    id: "ds-02",
+    name: "Special Fried Rice & Chicken",
+    category: "rice-pasta",
+    mainCategory: "nigerian",
+    description: "Aromatic basmati fried rice infused with liver cubes, sweet corn, carrots, runner beans and spring onions, accompanied by seasoned crispy golden fried chicken drumsticks.",
+    price: 8500,
+    image: "assets/images/fried-rice.jpg",
+    rating: 4.8,
+    reviewsCount: 98,
+    prepTime: "25-30 min",
+    calories: "740 kcal",
+    spicyLevel: 1,
+    isFeatured: true,
+    isChefSpecial: false,
+    isPopular: true,
+    available: true,
+    tags: ["Party Classic", "Rich Veggies"],
+    ingredients: ["Basmati rice", "Diced beef liver", "Carrots & sweet corn", "Seasoned fried chicken", "Vegetable stock"],
+    addOns: [
+      { id: "extra-chicken", name: "Extra Fried Chicken", price: 3200 },
+      { id: "fried-plantain", name: "Fried Plantain", price: 1200 },
+      { id: "moi-moi", name: "Gourmet Steamed Moi-Moi", price: 1500 }
+    ]
   },
   {
-    id: "wg-liv-03",
-    name: "Vervoordt Architectural Sling Lounge Chair",
-    category: "living",
-    categoryLabel: "Living Room Furniture",
-    price: 1450000,
-    badge: "Architectural Digest Feature",
-    image: "assets/images/wonder-grand-hero-1.jpg",
-    shortDesc: "Sculptural scissor-frame folding lounge chair in burnished walnut and full-grain espresso saddle leather.",
-    description: "Directly inspired by European brutalist minimalism, the Vervoordt Lounge Chair unites raw dark espresso bridle leather with an angled architectural silhouette. The supple leather conforms to the body with use, developing a rich, luxurious patina over decades of appreciation.",
-    dimensions: "72cm W × 88cm D × 76cm H",
-    materials: "Hand-waxed solid smoked walnut & Full-grain Italian bridle saddle leather",
-    finish: "Espresso Brown & Smoked Walnut",
-    featured: true,
-    inStock: true
-  },
-
-  /* ==========================================================================
-     2. BEDROOM FURNITURE
-     ========================================================================== */
-  {
-    id: "wg-bed-01",
-    name: "Elysian Bouclé & Walnut Floating Platform Bed",
-    category: "bedroom",
-    categoryLabel: "Bedroom Furniture",
-    price: 3800000,
-    badge: "Sanctuary Collection",
-    image: "assets/images/prod-upholstered-bed.jpg",
-    shortDesc: "Extended wingback upholstered headboard paired with a recessed floating walnut platform frame.",
-    description: "The Elysian Platform Bed transforms master suites into meditative sanctuaries. Its oversized headboard features soft vertical channel cushioning wrapped in tactile cream bouclé, while the recessed dark walnut base creates the illusion of floating above the floor.",
-    dimensions: "215cm W × 225cm L × 120cm Headboard H (King Size)",
-    materials: "Kiln-dried African Walnut, Belgian Linen-Bouclé Upholstery, Heavy Brass Brackets",
-    finish: "Cream White & Deep Walnut",
-    featured: true,
-    inStock: true
+    id: "ds-03",
+    name: "Spicy Peppered Beef Chops",
+    category: "beef",
+    mainCategory: "nigerian",
+    description: "Tender chunks of slow-braised prime beef tossed in a fiery, sweet-and-spicy habanero and caramelized bell pepper sauce, garnished with fresh onion rings.",
+    price: 9000,
+    image: "assets/images/peppered-beef.jpg",
+    rating: 4.9,
+    reviewsCount: 112,
+    prepTime: "20 min",
+    calories: "620 kcal",
+    spicyLevel: 3,
+    isFeatured: true,
+    isChefSpecial: true,
+    isPopular: true,
+    available: true,
+    tags: ["Spicy Favorite", "Tender Cuts"],
+    ingredients: ["Prime beef cuts", "Red Scotch bonnets", "Sweet red bell peppers", "Caramelized onions", "Native spices"],
+    addOns: [
+      { id: "extra-pepper-sauce", name: "Extra Spicy Pepper Glaze", price: 800 },
+      { id: "fried-yam", name: "Crispy Fried Yam Fries", price: 1800 },
+      { id: "chilled-drink", name: "Chilled Malta or Soft Drink", price: 1000 }
+    ]
   },
   {
-    id: "wg-bed-02",
-    name: "Kyoto Cantilevered Walnut Nightstand",
-    category: "bedroom",
-    categoryLabel: "Bedroom Furniture",
-    price: 850000,
-    badge: "Bespoke",
-    image: "assets/images/prod-walnut-nightstand.jpg",
-    shortDesc: "Minimalist dual-tier floating nightstand with soft-close mitered drawer and bronze hardware.",
-    description: "Constructed with precision dovetail joinery, the Kyoto Bedside Nightstand showcases continuous waterfall grain running seamlessly across the top and side panels. Features integrated felt-lined interior drawers and concealed wire management.",
-    dimensions: "60cm W × 45cm D × 48cm H",
-    materials: "Solid American Walnut, Bronzed Iron Accents, Suede Drawer Lining",
-    finish: "Hand-rubbed natural walnut oil",
-    featured: false,
-    inStock: true
+    id: "ds-04",
+    name: "Grilled Croaker Fish & Crispy Chips",
+    category: "seafood",
+    mainCategory: "continental",
+    description: "Whole fresh Atlantic croaker fish seasoned with our secret African herb rub, char-grilled to flaky perfection, served with golden potato chips, tartare dip, and spicy chili sauce.",
+    price: 13500,
+    image: "assets/images/grilled-fish.jpg",
+    rating: 5.0,
+    reviewsCount: 86,
+    prepTime: "30-35 min",
+    calories: "810 kcal",
+    spicyLevel: 2,
+    isFeatured: true,
+    isChefSpecial: true,
+    isPopular: true,
+    available: true,
+    tags: ["Chef's Signature", "Fresh Seafood"],
+    ingredients: ["Fresh whole croaker", "DAMSAM garlic-herb marinade", "Hand-cut potato chips", "House dip & chili dip"],
+    addOns: [
+      { id: "extra-chips", name: "Extra Hand-Cut Chips", price: 1500 },
+      { id: "grilled-plantain", name: "Roasted Boli (Plantain)", price: 1400 },
+      { id: "extra-sauce", name: "Extra Garlic Mayo & Pepper Sauce", price: 900 }
+    ]
   },
   {
-    id: "wg-bed-03",
-    name: "Ghent Natural Wool & Linen End-of-Bed Bench",
-    category: "bedroom",
-    categoryLabel: "Bedroom Furniture",
-    price: 920000,
-    badge: "New Arrival",
-    image: "assets/images/prod-linen-bench.jpg",
-    shortDesc: "Sculptural pillow-top ottoman bench with solid travertine pillar legs and textured sand wool upholstery.",
-    description: "A harmonious balance between heavyweight architectural travertine and tactile softness. The Ghent Bench provides luxurious seating at the foot of the bed or in spacious entry vestibules.",
-    dimensions: "150cm W × 50cm D × 45cm H",
-    materials: "Travertine Cylinder Legs, High-Density Foam, Textured Sand Linen-Wool Blend",
-    finish: "Sand Beige & Warm Travertine",
-    featured: false,
-    inStock: true
-  },
-
-  /* ==========================================================================
-     3. DINING ROOM FURNITURE
-     ========================================================================== */
-  {
-    id: "wg-din-01",
-    name: "The Castille Solid Smoked Oak Dining Table",
-    category: "dining",
-    categoryLabel: "Dining Room Furniture",
-    price: 4200000,
-    badge: "Masterpiece",
-    image: "assets/images/prod-oak-dining-table.jpg",
-    shortDesc: "Monumental 10-seater dining table with sculptural double pedestal base and hand-scraped dark oak plank top.",
-    description: "Designed for grand gatherings and intimate dinners alike, the Castille Dining Table is milled from select centuries-old oak trees. The twin fluted pedestals anchor an expansive 280cm table top treated with natural botanical oils to resist stains while celebrating timber grain.",
-    dimensions: "280cm L × 110cm W × 76cm H",
-    materials: "FSC-Certified Solid European White Oak, Deep Smoked Finish",
-    finish: "Dark Espresso Smoked Oak",
-    featured: true,
-    inStock: true
+    id: "ds-05",
+    name: "Creamy Garlic Seafood Pasta",
+    category: "rice-pasta",
+    mainCategory: "continental",
+    description: "Al dente fettuccine pasta smothered in a velvety parmesan and garlic cream sauce, tossed with jumbo tiger prawns, calamari rings and finished with fresh parsley and grated pecorino.",
+    price: 12500,
+    image: "assets/images/creamy-pasta.jpg",
+    rating: 4.8,
+    reviewsCount: 74,
+    prepTime: "25 min",
+    calories: "890 kcal",
+    spicyLevel: 1,
+    isFeatured: true,
+    isChefSpecial: false,
+    isPopular: true,
+    available: true,
+    tags: ["Continental Gourmet", "Rich & Creamy"],
+    ingredients: ["Fettuccine pasta", "Fresh cream & aged parmesan", "Tiger prawns", "Calamari rings", "Roasted garlic"],
+    addOns: [
+      { id: "extra-prawns", name: "Extra Grilled Tiger Prawns (4 pcs)", price: 4500 },
+      { id: "garlic-bread", name: "Crispy Garlic Baguette (3 slices)", price: 1800 },
+      { id: "parmesan-extra", name: "Extra Shaved Aged Parmesan", price: 1200 }
+    ]
   },
   {
-    id: "wg-din-02",
-    name: "Verona Cantilever Dining Chairs (Set of 2)",
-    category: "dining",
-    categoryLabel: "Dining Room Furniture",
-    price: 1100000,
-    badge: "Set of 2",
-    image: "assets/images/prod-dining-chairs.jpg",
-    shortDesc: "Curved tubular bronze frame dining chairs dressed in glove-soft warm taupe Italian leather.",
-    description: "Lightness meets enduring strength. The Verona Chair features an ergonomic cantilevered stance in antique bronzed steel, paired with hand-stitched glove leather seat cushions that provide all-evening dining comfort.",
-    dimensions: "54cm W × 58cm D × 82cm H (Seat: 47cm)",
-    materials: "Solid Bronzed Steel Frame, Semi-Aniline Italian Leather, Molded Ergonomic Shell",
-    finish: "Antique Bronze & Warm Taupe Leather",
-    featured: true,
-    inStock: true
+    id: "ds-06",
+    name: "DAMSAM Crispy BBQ Chicken Wings",
+    category: "chicken",
+    mainCategory: "snacks",
+    description: "Eight pieces of jumbo chicken wings double-fried for maximum crunch, generously glazed in our house smoky sweet chili-BBQ sauce, served with carrot-celery sticks and blue cheese dip.",
+    price: 7500,
+    image: "assets/images/chicken-wings.jpg",
+    rating: 4.9,
+    reviewsCount: 129,
+    prepTime: "20 min",
+    calories: "650 kcal",
+    spicyLevel: 2,
+    isFeatured: true,
+    isChefSpecial: false,
+    isPopular: true,
+    available: true,
+    tags: ["Customer Favorite", "Crispy & Saucy"],
+    ingredients: ["Crispy chicken wings", "Smoky honey BBQ glaze", "Sesame seeds", "Blue cheese dip"],
+    addOns: [
+      { id: "french-fries", name: "Crispy French Fries", price: 1500 },
+      { id: "extra-wings", name: "4 Additional Wings", price: 3200 },
+      { id: "dip-combo", name: "Trio Dip Sauce (Ranch, Spicy, BBQ)", price: 1000 }
+    ]
   },
   {
-    id: "wg-din-03",
-    name: "Sorento Fluted Marble & Walnut Credenza",
-    category: "dining",
-    categoryLabel: "Dining Room Furniture",
-    price: 3600000,
-    badge: "Showroom Feature",
-    image: "assets/images/prod-marble-credenza.jpg",
-    shortDesc: "Four-door architectural buffet credenza with bookmatched Nero Marquina marble top and fluted tambour fronts.",
-    description: "The Sorento Credenza offers sophisticated storage for luxury dinnerware, vintage spirits, and linens. Concealed touch-latch mechanisms maintain unbroken, minimalist facade lines.",
-    dimensions: "200cm W × 50cm D × 78cm H",
-    materials: "Solid Walnut Tambour Doors, Nero Marquina Italian Marble Top, Brushed Brass Base",
-    finish: "Walnut Brown & Polished Nero Marble",
-    featured: false,
-    inStock: true
-  },
-
-  /* ==========================================================================
-     4. OFFICE FURNITURE
-     ========================================================================== */
-  {
-    id: "wg-off-01",
-    name: "The Bauhaus Executive Walnut Floating Desk",
-    category: "office",
-    categoryLabel: "Office Furniture",
-    price: 3100000,
-    badge: "Executive Edition",
-    image: "assets/images/prod-executive-desk.jpg",
-    shortDesc: "Cantilevered executive study desk with integrated leather workpad, wire conduits, and hidden security drawers.",
-    description: "Meticulously proportioned for the discerning leader. The Bauhaus Desk pairs rich warm walnut timber with an embedded espresso leather desk blotter and soft-closing file drawers.",
-    dimensions: "200cm W × 90cm D × 75cm H",
-    materials: "Select American Walnut Solids & Veneers, Full-Grain Leather Inset, Brass Joinery",
-    finish: "Matte Walnut & Espresso Saddle Leather",
-    featured: true,
-    inStock: true
+    id: "ds-07",
+    name: "Traditional Egusi Soup & Pounded Yam",
+    category: "soups",
+    mainCategory: "nigerian",
+    description: "Rich melon seed soup prepared with bitterleaf or pumpkin leaves, fortified with smoked catfish, stockfish, tender beef tripe (shaki) and cow leg, served with silky smooth pounded yam.",
+    price: 9500,
+    image: "assets/images/egusi-soup.jpg",
+    rating: 5.0,
+    reviewsCount: 160,
+    prepTime: "25 min",
+    calories: "920 kcal",
+    spicyLevel: 2,
+    isFeatured: true,
+    isChefSpecial: true,
+    isPopular: true,
+    available: true,
+    tags: ["Authentic Nigerian", "Swallow Classic"],
+    ingredients: ["Hand-ground egusi melon", "Smoked catfish & stockfish", "Assorted meat cuts", "Palm oil & ugwu leaves", "Pounded yam swallow"],
+    addOns: [
+      { id: "extra-pounded-yam", name: "Extra Wrap of Pounded Yam", price: 1500 },
+      { id: "extra-goat-meat", name: "Extra Portion of Fried Goat Meat", price: 3500 },
+      { id: "extra-stockfish", name: "Extra Stockfish Head Piece", price: 2500 }
+    ]
   },
   {
-    id: "wg-off-02",
-    name: "Florence Ergonomic Saddle Leather Executive Chair",
-    category: "office",
-    categoryLabel: "Office Furniture",
-    price: 1650000,
-    badge: "Ergonomic Luxury",
-    image: "assets/images/prod-saddle-chair.jpg",
-    shortDesc: "Pneumatic height-adjustable high-back task chair wrapped in supple buttery cognac leather.",
-    description: "Engineered for prolonged focus without sacrificing aesthetic integrity. Featuring multi-position synchronous tilt, pneumatic smooth lift, and aluminum castors suited for timber flooring.",
-    dimensions: "68cm W × 70cm D × 115-125cm H",
-    materials: "Italian Top-Grain Leather, Cast Aluminum Base, High-Density Ergonomic Core",
-    finish: "Cognac Brown & Burnished Charcoal Base",
-    featured: false,
-    inStock: true
+    id: "ds-08",
+    name: "Catfish & Goat Meat Pepper Soup",
+    category: "soups",
+    mainCategory: "african",
+    description: "Steaming aromatic broth prepared with traditional uda, uziza and calabash nutmeg spices, loaded with tender chunks of seasoned goat meat and fresh catfish cutlet.",
+    price: 8000,
+    image: "assets/images/pepper-soup.jpg",
+    rating: 4.8,
+    reviewsCount: 88,
+    prepTime: "20 min",
+    calories: "450 kcal",
+    spicyLevel: 3,
+    isFeatured: false,
+    isChefSpecial: false,
+    isPopular: true,
+    available: true,
+    tags: ["Warming Broth", "Authentic Spices"],
+    ingredients: ["Goat meat & fresh catfish", "Uziza seeds & leaves", "Uda pods", "Aromatic native spices", "Hot pepper broth"],
+    addOns: [
+      { id: "boiled-plantain", name: "Boiled Half-Ripe Plantain", price: 1500 },
+      { id: "boiled-yam", name: "Boiled White Yam Cubes", price: 1400 },
+      { id: "extra-goat", name: "Extra Goat Meat Portions", price: 3200 }
+    ]
   },
   {
-    id: "wg-off-03",
-    name: "Vanguard Monolithic Architectural Bookcase",
-    category: "office",
-    categoryLabel: "Office Furniture",
-    price: 2750000,
-    badge: "Custom Milled",
-    image: "assets/images/about-materials.jpg",
-    shortDesc: "Open-plan asymmetric display shelving unit in blackened steel and smoked walnut dividers.",
-    description: "An elegant stage for curated art objects, volumes, and pottery. The asymmetric bays create a captivating rhythmic composition against minimalist walls.",
-    dimensions: "160cm W × 40cm D × 210cm H",
-    materials: "Darkened Structural Steel Uprights, Solid Walnut Shelves, Travertine Bookends",
-    finish: "Soft Black Steel & Walnut Brown",
-    featured: false,
-    inStock: true
-  },
-
-  /* ==========================================================================
-     5. OUTDOOR FURNITURE
-     ========================================================================== */
-  {
-    id: "wg-out-01",
-    name: "Solarium Grade-A Teak Double Daybed",
-    category: "outdoor",
-    categoryLabel: "Outdoor Furniture",
-    price: 3400000,
-    badge: "All-Weather Resort",
-    image: "assets/images/prod-teak-daybed.jpg",
-    shortDesc: "Extra-wide outdoor lounger crafted from sustainably harvested Indonesian plantation teak with QuickDry foam cushions.",
-    description: "Engineered to withstand tropical sun and rain gracefully. The Grade-A plantation teak contains natural protective oils that resist weathering, turning over years into a stunning silver-grey patina.",
-    dimensions: "180cm W × 200cm L × 40cm H",
-    materials: "Grade-A Solid Teak, Marine-grade Stainless Steel, Sunbrella Performance Canvas",
-    finish: "Natural Teak & Sand Beige Canvas",
-    featured: true,
-    inStock: true
+    id: "ds-09",
+    name: "Grand Seafood Okra Platter",
+    category: "soups",
+    mainCategory: "seafood",
+    description: "Finely diced crunchy okra soup cooked in aromatic seafood broth with giant tiger prawns, blue swimming crab, calamari, fresh snails and dried fish, accompanied by choice of swallow.",
+    price: 16000,
+    image: "assets/images/seafood-okra.jpg",
+    rating: 5.0,
+    reviewsCount: 95,
+    prepTime: "30 min",
+    calories: "850 kcal",
+    spicyLevel: 2,
+    isFeatured: true,
+    isChefSpecial: true,
+    isPopular: true,
+    available: true,
+    tags: ["Luxury Seafood", "Rich & Fresh"],
+    ingredients: ["Crunchy diced okra", "Whole blue crab", "Jumbo tiger prawns", "Sea snails & calamari", "Choice of swallow"],
+    addOns: [
+      { id: "extra-swallow", name: "Extra Pounded Yam or Eba", price: 1500 },
+      { id: "extra-crab", name: "Extra Whole Blue Crab", price: 4000 },
+      { id: "extra-snails", name: "Jumbo Fried Snails (2 pcs)", price: 4500 }
+    ]
   },
   {
-    id: "wg-out-02",
-    name: "Terracotta Minimalist Outdoor Dining Suite",
-    category: "outdoor",
-    categoryLabel: "Outdoor Furniture",
-    price: 2900000,
-    badge: "Alfresco Dining",
-    image: "assets/images/hero-slide-4.jpg",
-    shortDesc: "Powder-coated aluminum outdoor dining table with slatted teak top and six weatherproof rope-woven chairs.",
-    description: "Transform terraces and pool decks into sophisticated outdoor dining pavilions. Durable weather-resistant materials designed for effortless alfresco entertaining.",
-    dimensions: "Table: 220cm L × 100cm W × 75cm H",
-    materials: "Marine Powder-Coated Aluminum, Teak Top, Weatherproof Olefin Rope",
-    finish: "Espresso Bronze & Natural Sand Rope",
-    featured: false,
-    inStock: true
+    id: "ds-10",
+    name: "Classic Nigerian Meat Pie (2 pcs)",
+    category: "snacks",
+    mainCategory: "snacks",
+    description: "Golden flaky pastry crust baked to crisp perfection, filled with richly seasoned minced beef, soft potato cubes and sweet carrots in a savory thick gravy.",
+    price: 3500,
+    image: "assets/images/meat-pie.jpg",
+    rating: 4.7,
+    reviewsCount: 62,
+    prepTime: "10 min",
+    calories: "510 kcal",
+    spicyLevel: 1,
+    isFeatured: false,
+    isChefSpecial: false,
+    isPopular: false,
+    available: true,
+    tags: ["Freshly Baked", "Golden Flaky"],
+    ingredients: ["Flaky butter pastry", "Minced prime beef", "Diced potatoes & carrots", "Nutmeg & herb seasoning"],
+    addOns: [
+      { id: "extra-pie", name: "Add 1 Additional Meat Pie", price: 1600 },
+      { id: "drink-chilled", name: "Chilled Soft Drink / Water", price: 800 }
+    ]
   },
   {
-    id: "wg-out-03",
-    name: "Monolithic Basalt Stone Outdoor Fire Table",
-    category: "outdoor",
-    categoryLabel: "Outdoor Furniture",
-    price: 1950000,
-    badge: "Evening Ambiance",
-    image: "assets/images/prod-travertine-table.jpg",
-    shortDesc: "Hand-cast architectural concrete fire plinth with lava rocks and concealed electronic ignition system.",
-    description: "The dramatic focal point of any luxury terrace. Provides gentle radiant heat and mesmerizing ambient flame for nocturnal garden living.",
-    dimensions: "120cm Diameter × 40cm H",
-    materials: "Glass-Fiber Reinforced Architectural Concrete, Stainless Steel Burner, Lava Rocks",
-    finish: "Charcoal Basalt Finish",
-    featured: false,
-    inStock: true
-  },
-
-  /* ==========================================================================
-     6. LUXURY INTERIOR ACCESSORIES
-     ========================================================================== */
-  {
-    id: "wg-acc-01",
-    name: "Alabaster & Bronze Sculptural Table Lamp",
-    category: "accessories",
-    categoryLabel: "Luxury Interior Accessories",
-    price: 450000,
-    badge: "Artisanal Lighting",
-    image: "assets/images/prod-alabaster-lamp.jpg",
-    shortDesc: "Solid carved Spanish alabaster cylinder table lamp with solid brushed bronze hardware and linen shade.",
-    description: "When illuminated, the natural veining of translucent Spanish alabaster casts a warm, ethereal golden glow across bedside tables and consoles.",
-    dimensions: "35cm Diameter × 58cm H",
-    materials: "Solid Natural Alabaster Stone, Hand-finished Bronze, Belgian Linen Shade",
-    finish: "Warm Translucent Stone & Brushed Bronze",
-    featured: true,
-    inStock: true
+    id: "ds-11",
+    name: "DAMSAM Deluxe Chicken & Beef Shawarma",
+    category: "snacks",
+    mainCategory: "continental",
+    description: "Warm flatbread loaded with shredded char-grilled chicken breast, tender beef strips, double cocktail sausages, crunchy cabbage slaw and our legendary creamy spicy garlic sauce.",
+    price: 4500,
+    image: "assets/images/shawarma.jpg",
+    rating: 4.9,
+    reviewsCount: 180,
+    prepTime: "15 min",
+    calories: "690 kcal",
+    spicyLevel: 2,
+    isFeatured: false,
+    isChefSpecial: false,
+    isPopular: true,
+    available: true,
+    tags: ["Loaded Wrap", "Double Sausage"],
+    ingredients: ["Toasted pita bread", "Grilled chicken & beef strips", "Double sausage links", "Signature garlic cream dressing"],
+    addOns: [
+      { id: "extra-cheese", name: "Melted Mozzarella & Cheddar", price: 1000 },
+      { id: "extra-sausage", name: "Extra Sausage Link", price: 800 },
+      { id: "extra-spicy", name: "Extra Suya Pepper Kick", price: 300 }
+    ]
   },
   {
-    id: "wg-acc-02",
-    name: "Artisan Ceramic Vessel No. 04 (Sculptural Vase)",
-    category: "accessories",
-    categoryLabel: "Luxury Interior Accessories",
-    price: 280000,
-    badge: "Atelier Piece",
-    image: "assets/images/prod-ceramic-vase.jpg",
-    shortDesc: "Hand-thrown stoneware vessel with raw textured sand slip glaze and organic asymmetrical silhouette.",
-    description: "Crafted by master ceramic artists in limited studio batches. Designed as a standalone architectural statement or paired with dry botanical branches.",
-    dimensions: "28cm Diameter × 42cm H",
-    materials: "High-fired Stoneware Clay, Raw Mineral Sand Slip Glaze",
-    finish: "Matte Warm Taupe & Sand Texture",
-    featured: true,
-    inStock: true
+    id: "ds-12",
+    name: "Signature Nigerian Chapman",
+    category: "drinks",
+    mainCategory: "drinks",
+    description: "The quintessential Nigerian mocktail: vibrant blend of Fanta, Sprite, Angostura bitters, grenadine, garnished with fresh cucumber ribbons, orange wheels, and garden mint over ice.",
+    price: 2500,
+    image: "assets/images/chapman.jpg",
+    rating: 4.9,
+    reviewsCount: 130,
+    prepTime: "5 min",
+    calories: "180 kcal",
+    spicyLevel: 0,
+    isFeatured: false,
+    isChefSpecial: false,
+    isPopular: true,
+    available: true,
+    tags: ["House Special Drink", "Refreshing"],
+    ingredients: ["Citrus soda blend", "Pomegranate grenadine", "Aromatic bitters", "Cucumber & citrus garnish"],
+    addOns: [
+      { id: "pitcher-upgrade", name: "Upgrade to 1.5L Sharing Pitcher", price: 4500 }
+    ]
   },
   {
-    id: "wg-acc-03",
-    name: "Atlas Hand-Knotted Organic Wool & Silk Rug",
-    category: "accessories",
-    categoryLabel: "Luxury Interior Accessories",
-    price: 1750000,
-    badge: "Heritage Weave",
-    image: "assets/images/prod-wool-rug.jpg",
-    shortDesc: "High-pile luxury area rug hand-knotted from un-dyed New Zealand virgin wool and raw silk yarns.",
-    description: "Woven by generational artisans taking over four months to knot by hand. The subtle high-low pile creates tactile warmth and acoustic serenity in minimalist spaces.",
-    dimensions: "300cm × 400cm (Custom Sizes Available)",
-    materials: "80% Pure New Zealand Wool, 20% Raw Mulberry Silk",
-    finish: "Warm Cream White & Oat Taupe",
-    featured: true,
-    inStock: true
+    id: "ds-13",
+    name: "Tropical Sunrise Fruit Smoothie",
+    category: "drinks",
+    mainCategory: "drinks",
+    description: "100% natural cold-pressed smoothie made with ripe Nigerian mangoes, sweet pineapples, passion fruit puree, and organic ginger with a touch of wildflower honey.",
+    price: 3000,
+    image: "assets/images/smoothie.jpg",
+    rating: 4.8,
+    reviewsCount: 52,
+    prepTime: "5 min",
+    calories: "210 kcal",
+    spicyLevel: 0,
+    isFeatured: false,
+    isChefSpecial: false,
+    isPopular: false,
+    available: true,
+    tags: ["100% Natural", "No Added Sugar"],
+    ingredients: ["Fresh mango", "Pineapple chunks", "Passion fruit", "Fresh ginger & honey"],
+    addOns: [
+      { id: "chia-seeds", name: "Add Organic Chia Seeds", price: 500 }
+    ]
+  },
+  {
+    id: "ds-14",
+    name: "Molten Chocolate & Red Velvet Cake",
+    category: "desserts",
+    mainCategory: "desserts",
+    description: "A decadent duet of warm molten dark chocolate cake with a gooey center paired with a velvety soft red velvet slice, served with rich vanilla bean cream.",
+    price: 4500,
+    image: "assets/images/dessert-cake.jpg",
+    rating: 4.9,
+    reviewsCount: 65,
+    prepTime: "10 min",
+    calories: "520 kcal",
+    spicyLevel: 0,
+    isFeatured: false,
+    isChefSpecial: false,
+    isPopular: true,
+    available: true,
+    tags: ["Decadent", "Warm Center"],
+    ingredients: ["Belgian dark cocoa", "Cream cheese frosting", "Madagascar vanilla", "Fresh berries"],
+    addOns: [
+      { id: "ice-cream-scoop", name: "Extra Scoop Vanilla Gelato", price: 1200 }
+    ]
   }
 ];
 
-// Helper to format Nigerian Naira
-function formatNaira(amount) {
-  return "₦" + amount.toLocaleString('en-NG');
-}
+const SPECIAL_OFFERS = [
+  {
+    id: "offer-01",
+    badge: "WEEKEND SPECIAL",
+    code: "WEEKENDJOY",
+    title: "The DAMSAM Feast Combo",
+    subtitle: "Smoky Jollof Rice + Grilled Chicken Quarter + Golden Dodo + Chilled Chapman",
+    description: "Our #1 customer favorite bundled into a celebratory weekend meal pack. Cooked fresh with authentic Nigerian firewood smokiness.",
+    regularPrice: 12500,
+    offerPrice: 9900,
+    discountPercent: 21,
+    image: "assets/images/jollof-chicken.jpg",
+    validUntil: "Every Friday – Sunday",
+    itemsIncluded: [
+      "1x Smoky Party Jollof Rice",
+      "1x Herb-Basted Grilled Chicken",
+      "1x Golden Fried Plantain (Dodo)",
+      "1x Signature House Chapman (500ml)"
+    ]
+  },
+  {
+    id: "offer-02",
+    badge: "FAMILY PACK",
+    code: "FAMILY20",
+    title: "Sunday Family Banquet",
+    subtitle: "Jollof Rice Platter + Fried Rice Platter + 4 Grilled Chicken Pieces + 2 Meat Pies + 2L Drinks",
+    description: "Feed up to 4-5 people with our generous family feast platter designed for gatherings, after-church lunches, and family get-togethers.",
+    regularPrice: 38000,
+    offerPrice: 29500,
+    discountPercent: 22,
+    image: "assets/images/hero-food.jpg",
+    validUntil: "Available Every Day",
+    itemsIncluded: [
+      "Large Platter Jollof Rice",
+      "Large Platter Fried Rice",
+      "4x Crispy Spiced Chicken Quarters",
+      "2x Freshly Baked Meat Pies",
+      "1x 2L Soft Beverage"
+    ]
+  },
+  {
+    id: "offer-03",
+    badge: "LUNCH EXPRESS",
+    code: "LUNCH10",
+    title: "Corporate Lunch Box",
+    subtitle: "Special Fried Rice + Crispy Chicken + Coleslaw + Bottled Water",
+    description: "Speedy 30-minute delivery to offices across Lekki, Victoria Island, and Ikoyi. Packed in premium leak-proof microwaveable containers.",
+    regularPrice: 9500,
+    offerPrice: 7500,
+    discountPercent: 21,
+    image: "assets/images/fried-rice.jpg",
+    validUntil: "Monday – Friday (11:30 AM – 3:30 PM)",
+    itemsIncluded: [
+      "1x Special Fried Rice Box",
+      "1x Seasoned Fried Chicken Cut",
+      "1x Fresh Vegetable Coleslaw",
+      "1x Chilled Bottled Water"
+    ]
+  }
+];
+
+const REVIEWS = [
+  {
+    id: "rev-01",
+    author: "Dr. Babatunde Alabi",
+    role: "Verified Diner & Food Critic",
+    rating: 5,
+    date: "November 14, 2026",
+    comment: "The smoky party jollof rice at DAMSAM Food Wurld is easily one of the best in Lagos! The grilled chicken was juicy, deeply flavorful, and not dry at all. Ordering online was smooth, and my delivery arrived in under 40 minutes warm and neatly packed.",
+    avatar: "BA",
+    favoriteDish: "Jollof Rice & Grilled Chicken"
+  },
+  {
+    id: "rev-02",
+    author: "Ngozi Okafor",
+    role: "Regular Customer",
+    rating: 5,
+    date: "November 18, 2026",
+    comment: "The seafood okra platter was exceptional — packed with real jumbo prawns, crab, and rich stock. The atmosphere in the dining room is modern, serene, and clean. This has become my family's go-to spot for weekend dining.",
+    avatar: "NO",
+    favoriteDish: "Grand Seafood Okra Platter"
+  },
+  {
+    id: "rev-03",
+    author: "Tariq Adeleke",
+    role: "Office Lunch Coordinator",
+    rating: 5,
+    date: "November 20, 2026",
+    comment: "We regularly order lunch boxes for our team at Admiralty Way. Portions are generous, presentation is top-notch, and the peppered beef has just the right spicy kick without being overwhelming.",
+    avatar: "TA",
+    favoriteDish: "Spicy Peppered Beef & Fried Rice"
+  },
+  {
+    id: "rev-04",
+    author: "Amina Yusuf",
+    role: "Lekki Resident",
+    rating: 5,
+    date: "November 22, 2026",
+    comment: "Made a table reservation online for my anniversary dinner. The table was prepared beautifully with candles, the staff was extremely courteous, and the grilled croaker fish was sublime. 10/10 experience!",
+    avatar: "AY",
+    favoriteDish: "Grilled Croaker Fish & Chips"
+  }
+];
+
+const GALLERY_ITEMS = [
+  { id: "g-01", category: "food", title: "Signature Party Jollof & Chicken", image: "assets/images/jollof-chicken.jpg", caption: "Our crowd-favorite smoky party jollof rice served with grilled chicken and plantain." },
+  { id: "g-02", category: "restaurant", title: "Warm Contemporary Dining Hall", image: "assets/images/restaurant-interior.jpg", caption: "Designed for comfort, romantic dinners, and family celebrations." },
+  { id: "g-03", category: "food", title: "Char-Grilled Atlantic Croaker", image: "assets/images/grilled-fish.jpg", caption: "Fresh ocean catch marinated with African native herbs and lemon." },
+  { id: "g-04", category: "events", title: "Intimate Table Setup & Candlelight", image: "assets/images/reservation-bg.jpg", caption: "Reserved table ready for an evening dining experience." },
+  { id: "g-05", category: "food", title: "Creamy Garlic Seafood Pasta", image: "assets/images/creamy-pasta.jpg", caption: "Velvety alfredo sauce with jumbo tiger prawns and parmesan." },
+  { id: "g-06", category: "restaurant", title: "The Master Kitchen & Chefs", image: "assets/images/about-kitchen.jpg", caption: "Where our culinary brigade crafts every meal from scratch daily." },
+  { id: "g-07", category: "food", title: "Spicy Peppered Beef Chops", image: "assets/images/peppered-beef.jpg", caption: "Slow-braised beef tossed in habanero bell pepper glaze." },
+  { id: "g-08", category: "events", title: "Celebrations & Dining Moments", image: "assets/images/gallery-event.jpg", caption: "Friends and families enjoying good food and great moments together." },
+  { id: "g-09", category: "food", title: "Artisan Plating & Culinary Detail", image: "assets/images/gallery-plating.jpg", caption: "Every dish is prepared with culinary passion and modern aesthetics." }
+];

@@ -3,863 +3,666 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WONDER GRAND — Haute Furniture & Architectural Living | Osun State, Nigeria</title>
-  <meta name="description" content="Discover extraordinary luxury furniture and curated interior accessories handcrafted for timeless architectural sanctuaries. Wonder Grand, Osun State, Nigeria.">
+  <title>DAMSAM Food Wurld | Delicious Food & Online Ordering</title>
+  <meta name="description" content="Discover delicious Nigerian, African and continental meals at DAMSAM Food Wurld. Browse our menu, order online or reserve your table. Plot 14, Admiralty Way, Lekki Phase 1, Lagos.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="DAMSAM Food Wurld | Delicious Food & Online Ordering">
+  <meta property="og:description" content="Discover delicious meals, refreshing drinks and unforgettable flavors at DAMSAM Food Wurld.">
+  <meta property="og:image" content="assets/images/hero-food.jpg">
+  <meta property="og:type" content="restaurant">
+  <meta name="theme-color" content="#D32323">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23D32323'/><text x='50%' y='68%' font-size='56' font-weight='900' fill='white' text-anchor='middle' font-family='sans-serif'>D</text></svg>">
+
+  <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="assets/css/variables.css">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/slider.css">
-  <link rel="stylesheet" href="assets/css/components.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/damsam.css">
 </head>
-<body>
+<body data-page="home">
 
-  <!-- ==========================================================================
-       1. STICKY LUXURY NAVIGATION HEADER
-       ========================================================================== -->
-  <header class="header-main" id="siteHeader">
-    <div class="header-inner">
-      <!-- Brand Logo / Wordmark -->
-      <a href="index.html" class="brand-logo" aria-label="Wonder Grand Luxury Living">
-        <div class="brand-monogram">WG</div>
-        <div class="brand-text">
-          <span class="brand-name">WONDER GRAND</span>
-          <span class="brand-sub">HAUTE LIVING • OSUN STATE</span>
-        </div>
+  <!-- TOP ANNOUNCEMENT BAR (Reference Menu Red Header Inspired) -->
+  <div class="top-notice-bar">
+    <div class="container">
+      <div class="notice-left">
+        <span class="notice-item"><i class="fa-solid fa-phone"></i> CALL: <strong>+234 803 456 7890</strong></span>
+        <span class="notice-item"><i class="fa-solid fa-clock"></i> Mon – Sun: 8:00 AM – 10:30 PM</span>
+      </div>
+      <div class="notice-right">
+        <span class="notice-item"><i class="fa-solid fa-truck-fast"></i> <span class="notice-badge">FREE DELIVERY</span> Orders over ₦25,000</span>
+        <span class="notice-item"><i class="fa-solid fa-location-dot"></i> Lekki Phase 1, Lagos</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOBAL STICKY HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <!-- Wordmark Logo (Section 2) -->
+      <a href="index.html" class="site-logo" aria-label="DAMSAM Food Wurld Home">
+        <span class="logo-main">DAMSAM</span>
+        <span class="logo-sub">FOOD WURLD</span>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <nav class="nav-menu" aria-label="Primary Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" class="nav-link active">Home</a></li>
-          <li><a href="about.html" class="nav-link">About Us</a></li>
-          <li><a href="services.html" class="nav-link">Our Services</a></li>
-          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-        </ul>
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="offers.html" class="nav-link">Offers</a>
+        <a href="reservations.html" class="nav-link">Reservations</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Action Utilities -->
-      <div class="nav-actions">
-        <!-- Search Trigger -->
-        <button class="nav-icon-btn open-search-btn" aria-label="Search Collections">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
+      <!-- Right Header Actions -->
+      <div class="header-actions">
+        <!-- Cart Trigger -->
+        <button class="cart-btn-trigger" aria-label="View Cart" title="View Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-badge" style="display: none;">0</span>
         </button>
 
-        <!-- Wishlist Drawer Trigger -->
-        <button class="nav-icon-btn open-wishlist-btn" aria-label="View Wishlist">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-          </svg>
-          <span class="nav-badge-count wishlist-count-badge">0</span>
-        </button>
-
-        <!-- Shopping Cart Drawer Trigger -->
-        <button class="nav-icon-btn open-cart-btn" aria-label="View Shopping Cart">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
-          </svg>
-          <span class="nav-badge-count cart-count-badge">0</span>
-        </button>
-
-        <!-- Shop Collection CTA Button -->
-        <a href="#collectionsSection" class="btn-header-cta">
-          Shop Collection
+        <!-- Order Now CTA -->
+        <a href="menu.html" class="btn btn-primary btn-sm d-none-mobile">
+          <i class="fa-solid fa-utensils"></i> Order Now
         </a>
 
-        <!-- Mobile Menu Toggle Button -->
-        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
+        <!-- Hamburger for Mobile -->
+        <button class="hamburger-btn" aria-label="Open Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- ==========================================================================
-       2. CINEMATIC SLIDER REVOLUTION-INSPIRED HERO SECTION (SIGNATURE FEATURE)
-       ========================================================================== -->
-  <section class="hero-slider-section" id="heroSlider" aria-label="Featured Furniture Collections Showcase">
-    <!-- Top Progress Bar (Slider Revolution Synchronized Timer) -->
-    <div class="slider-progress-track">
-      <div class="slider-progress-bar" id="sliderProgressBar"></div>
-    </div>
-
-    <!-- Navigation Arrows -->
-    <button class="slider-arrow-btn slider-arrow-prev" id="sliderPrevBtn" aria-label="Previous Slide">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="15 18 9 12 15 6"></polyline>
-      </svg>
-    </button>
-    <button class="slider-arrow-btn slider-arrow-next" id="sliderNextBtn" aria-label="Next Slide">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polyline points="9 18 15 12 9 6"></polyline>
-      </svg>
-    </button>
-
-    <!-- Slide 1: Reference Interior Image (User's Inspiration) -->
-    <div class="slide active" data-slide-index="0">
-      <div class="slide-bg-wrapper">
-        <img src="assets/images/wonder-grand-hero-1.jpg" alt="Wonder Grand Architectural Living Collection" class="slide-bg-img">
-        <div class="slide-overlay"></div>
-      </div>
-      <div class="slide-content-container">
-        <div class="slide-text-box">
-          <span class="slide-eyebrow">COLLECTION 01 • OSUN STATE ATELIER</span>
-          <h1 class="slide-headline">Elevate Your Space.<br><span class="italic-serif">Define Your Style.</span></h1>
-          <p class="slide-description">
-            Discover exceptional furniture designed to transform ordinary spaces into extraordinary living experiences. Handcrafted architectural seating, raw Roman stone, and bespoke minimalism.
-          </p>
-          <div class="slide-actions">
-            <a href="#collectionsSection" class="btn btn-sand">Explore Collection</a>
-            <button class="btn btn-outline-cream trigger-consultation-btn" data-service="Bespoke Living Room Commission">
-              Private Consultation
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- Corner Architectural Badge -->
-      <div class="slide-badge-corner">
-        <div class="slide-badge-icon">01</div>
-        <div class="slide-badge-text">
-          <span class="slide-badge-title">Vervoordt Sling Lounge</span>
-          <span class="slide-badge-subtitle">Full-grain espresso leather & smoked walnut</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 2: Contemporary Luxury Living -->
-    <div class="slide" data-slide-index="1">
-      <div class="slide-bg-wrapper">
-        <img src="assets/images/hero-slide-2.jpg" alt="Contemporary Marble & Hardwood Living Room" class="slide-bg-img">
-        <div class="slide-overlay"></div>
-      </div>
-      <div class="slide-content-container">
-        <div class="slide-text-box">
-          <span class="slide-eyebrow">COLLECTION 02 • TIMELESS CRAFTSMANSHIP</span>
-          <h2 class="slide-headline">Luxury Is in<br><span class="italic-serif">Every Detail.</span></h2>
-          <p class="slide-description">
-            Experience timeless designs, exceptional craftsmanship and furniture that speaks the language of elegance. Meticulously sculpted proportions with natural stone accents.
-          </p>
-          <div class="slide-actions">
-            <a href="about.html" class="btn btn-sand">Discover Our Story</a>
-            <a href="#collectionsSection" class="btn btn-outline-cream">View Showroom</a>
-          </div>
-        </div>
-      </div>
-      <div class="slide-badge-corner">
-        <div class="slide-badge-icon">02</div>
-        <div class="slide-badge-text">
-          <span class="slide-badge-title">Monolith Travertine</span>
-          <span class="slide-badge-subtitle">Carved raw Italian vein plinth table</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 3: Serene Bedroom Sanctuary -->
-    <div class="slide" data-slide-index="2">
-      <div class="slide-bg-wrapper">
-        <img src="assets/images/hero-slide-3.jpg" alt="Luxury Upholstered Bedroom Suite" class="slide-bg-img">
-        <div class="slide-overlay"></div>
-      </div>
-      <div class="slide-content-container">
-        <div class="slide-text-box">
-          <span class="slide-eyebrow">COLLECTION 03 • SANCTUARY LIVING</span>
-          <h2 class="slide-headline">Designed for Comfort.<br><span class="italic-serif">Created for Living.</span></h2>
-          <p class="slide-description">
-            Bring sophistication and comfort into every corner of your home with our exclusive furniture collections. Sumptuous wool bouclé and floating walnut joinery.
-          </p>
-          <div class="slide-actions">
-            <a href="#collectionsSection" class="btn btn-sand">Shop Now</a>
-            <a href="services.html" class="btn btn-outline-cream">Custom Joinery</a>
-          </div>
-        </div>
-      </div>
-      <div class="slide-badge-corner">
-        <div class="slide-badge-icon">03</div>
-        <div class="slide-badge-text">
-          <span class="slide-badge-title">Elysian Platform Bed</span>
-          <span class="slide-badge-subtitle">Belgian bouclé & recessed walnut base</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 4: Sculptural Minimalist Dining -->
-    <div class="slide" data-slide-index="3">
-      <div class="slide-bg-wrapper">
-        <img src="assets/images/hero-slide-4.jpg" alt="Sculptural Dining Room & Lighting" class="slide-bg-img">
-        <div class="slide-overlay"></div>
-      </div>
-      <div class="slide-content-container">
-        <div class="slide-text-box">
-          <span class="slide-eyebrow">COLLECTION 04 • HAUTE ENTERTAINING</span>
-          <h2 class="slide-headline">Your Space Deserves<br><span class="italic-serif">Something Extraordinary.</span></h2>
-          <p class="slide-description">
-            From statement furniture to exquisite interior accessories, discover the art of beautiful living. Solid smoked oak dining tables engineered for generations of communion.
-          </p>
-          <div class="slide-actions">
-            <a href="#collectionsSection" class="btn btn-sand">View Collections</a>
-            <a href="contact.html" class="btn btn-outline-cream">Book Appointment</a>
-          </div>
-        </div>
-      </div>
-      <div class="slide-badge-corner">
-        <div class="slide-badge-icon">04</div>
-        <div class="slide-badge-text">
-          <span class="slide-badge-title">The Castille Table</span>
-          <span class="slide-badge-subtitle">10-Seater double pedestal smoked oak</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom Controls Bar (Pagination, Counter & Autoplay toggle) -->
-    <div class="slider-bottom-bar">
-      <!-- Indicators -->
-      <div class="slider-indicators" id="sliderIndicators">
-        <button class="slider-indicator-item active" data-slide-target="0">
-          <span>01</span>
-          <span class="slider-indicator-line"></span>
-        </button>
-        <button class="slider-indicator-item" data-slide-target="1">
-          <span>02</span>
-          <span class="slider-indicator-line"></span>
-        </button>
-        <button class="slider-indicator-item" data-slide-target="2">
-          <span>03</span>
-          <span class="slider-indicator-line"></span>
-        </button>
-        <button class="slider-indicator-item" data-slide-target="3">
-          <span>04</span>
-          <span class="slider-indicator-line"></span>
-        </button>
-      </div>
-
-      <!-- Counter -->
-      <div class="slider-counter">
-        <span class="slider-counter-current" id="sliderCounterCurrent">01</span>
-        <span class="slider-counter-divider">/</span>
-        <span>04</span>
-      </div>
-
-      <!-- Pause / Play Toggle -->
-      <button class="slider-play-toggle" id="sliderPlayToggle" aria-label="Pause Autoplay">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-          <rect x="6" y="4" width="4" height="16" rx="1"></rect>
-          <rect x="14" y="4" width="4" height="16" rx="1"></rect>
-        </svg>
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav-panel">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="site-logo">
+        <span class="logo-main">DAMSAM</span>
+        <span class="logo-sub">FOOD WURLD</span>
+      </a>
+      <button class="close-mobile-nav close-drawer-btn" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
       </button>
     </div>
-  </section>
-
-  <!-- ==========================================================================
-       3. BRAND STATEMENT & PHILOSOPHY STRIP
-       ========================================================================== -->
-  <section class="section-padding-sm bg-sand">
-    <div class="container text-center">
-      <div style="max-width: 900px; margin: 0 auto;">
-        <span class="section-eyebrow">ATELIER WONDER GRAND • OSUN STATE</span>
-        <p style="font-family: var(--font-serif); font-size: clamp(1.4rem, 2.5vw, 2.1rem); line-height: 1.5; color: var(--color-espresso); font-weight: 400;">
-          "True luxury is not loud ornament; it is the silent dialogue between unyielding monolithic stone, buttery aged leathers, and centuries-old hardwoods tailored for calm sanctuaries."
-        </p>
-        <div style="margin-top: 1.5rem; display: flex; align-items: center; justify-content: center; gap: 2rem;">
-          <span style="font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-walnut); font-weight: 600;">Handcrafted in Nigeria</span>
-          <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-gold);"></span>
-          <span style="font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-walnut); font-weight: 600;">White-Glove Delivery</span>
-          <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-gold);"></span>
-          <span style="font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-walnut); font-weight: 600;">10-Year Warranty</span>
-        </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="active"><span>Home</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="menu.html"><span>Menu</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="about.html"><span>About</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="gallery.html"><span>Gallery</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="offers.html"><span>Offers</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="reservations.html"><span>Reservations</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="contact.html"><span>Contact</span> <i class="fa-solid fa-angle-right"></i></a></li>
+      <li><a href="track-order.html"><span>Track Order</span> <i class="fa-solid fa-angle-right"></i></a></li>
+    </ul>
+    <div style="padding-top: 20px; border-top: 1px solid var(--border-light);">
+      <a href="menu.html" class="btn btn-primary btn-block">
+        <i class="fa-solid fa-utensils"></i> ORDER NOW
+      </a>
+      <div style="margin-top: 16px; font-size: 0.85rem; color: var(--charcoal-muted); text-align: center;">
+        <i class="fa-solid fa-phone" style="color: var(--primary-red);"></i> +234 803 456 7890
       </div>
     </div>
-  </section>
+  </aside>
 
-  <!-- ==========================================================================
-       4. SHOPPING & PRODUCT COLLECTIONS (ALL 6 CATEGORIES)
-       ========================================================================== -->
-  <section class="section-padding bg-cream" id="collectionsSection">
-    <div class="container-wide">
-      <div class="section-header-editorial">
-        <span class="section-eyebrow">CURATED PORTFOLIO</span>
-        <h2 class="section-title">The Furniture Collections</h2>
-        <p class="section-subtitle">
-          Explore our bespoke suites across six signature categories. Each piece is individually crafted using raw architectural materials, kiln-dried hardwoods, and precision joinery.
-        </p>
-      </div>
-
-      <!-- Category Filter Tabs -->
-      <div class="filter-tabs-wrapper" id="categoryFilterTabs">
-        <!-- Rendered dynamically by main.js -->
-      </div>
-
-      <!-- Dynamic Product Catalog Grid -->
-      <div class="catalog-grid" id="productCatalogGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2.2rem;">
-        <!-- Rendered dynamically by main.js from FURNITURE_PRODUCTS data -->
-      </div>
-
-      <!-- Bottom Explore Banner -->
-      <div style="margin-top: 5rem; text-align: center; padding: 3.5rem; background: var(--bg-card-warm); border: 1px solid var(--border-light); border-radius: var(--radius-sm);">
-        <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: var(--color-espresso); margin-bottom: 0.8rem;">
-          Seeking a Bespoke Dimension or Custom Fabric?
-        </h3>
-        <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.8rem;">
-          Our master cabinetmakers and upholstery atelier in Osun State specialize in custom architectural commissions tailored to your interior design blueprints.
-        </p>
-        <button class="btn btn-walnut trigger-consultation-btn" data-service="Custom Architectural Commission">
-          Request Custom Commission
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-       5. CRAFTSMANSHIP & MATERIALS SPOTLIGHT (EDITORIAL SPLIT)
-       ========================================================================== -->
-  <section class="section-padding bg-espresso">
-    <div class="container">
-      <div class="split-feature-grid">
-        <div class="split-feature-img-box">
-          <img src="assets/images/about-materials.jpg" alt="Wonder Grand Natural Architectural Materials" class="split-feature-img">
-          <div class="feature-floating-badge">
-            <div class="badge-number">100%</div>
-            <div class="badge-text">Authentic Raw Monolithic & Hardwood Materials</div>
+  <main>
+    <!-- SECTION 1: HERO (Section 6) -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-text-content">
+          <div class="hero-pill-badge">
+            <i class="fa-solid fa-award"></i> FRESH • FLAVORFUL • MADE FOR YOU
+          </div>
+          <h1 class="hero-title">
+            GOOD FOOD.<br>
+            <span>GREAT MOMENTS.</span>
+          </h1>
+          <p class="hero-desc">
+            Discover delicious meals, refreshing drinks and unforgettable flavors at DAMSAM Food Wurld. From smoky party jollof and rich native soups to prime grilled seafood and continental classics.
+          </p>
+          <div class="hero-cta-group">
+            <a href="menu.html" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-bag-shopping"></i> ORDER NOW
+            </a>
+            <a href="reservations.html" class="btn btn-outline btn-lg">
+              <i class="fa-solid fa-calendar-check"></i> RESERVE A TABLE
+            </a>
+          </div>
+          <div class="hero-trust-row">
+            <div class="trust-item">
+              <i class="fa-solid fa-shield-halved"></i> 100% Fresh Ingredients
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-bolt"></i> 35-min Speedy Delivery
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-certificate"></i> Halal & Hygienic
+            </div>
           </div>
         </div>
 
-        <div class="split-feature-content">
-          <span class="section-eyebrow" style="color: var(--color-sand);">THE ATELIER STANDARD</span>
-          <h2 class="section-title" style="color: var(--color-cream);">Uncompromising Materials.<br><span class="italic-serif" style="color: var(--color-sand);">Generational Soul.</span></h2>
-          <p class="section-subtitle" style="color: var(--text-light-muted); margin-bottom: 2rem;">
-            At Wonder Grand, luxury is defined by authenticity. We shun synthetic veneers and fragile composites in favor of honest, tactile elements that grow more distinguished with age.
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/hero-food.jpg" alt="DAMSAM Signature Nigerian Jollof and Grilled Chicken Platter" loading="eager">
+          </div>
+          <div class="hero-floating-card">
+            <div class="floating-icon-wrap">
+              <i class="fa-solid fa-fire"></i>
+            </div>
+            <div class="floating-text-wrap">
+              <h4>Smoky Party Jollof</h4>
+              <p>Authentic Nigerian Recipe with Grilled Chicken</p>
+            </div>
+          </div>
+          <div class="hero-rating-badge">
+            <i class="fa-solid fa-star"></i>
+            <span>4.9 / 5.0 (500+ Orders)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: QUICK ACTION BAR -->
+    <section class="quick-action-section">
+      <div class="container">
+        <div class="quick-action-grid">
+          <a href="menu.html" class="action-card">
+            <div class="action-icon"><i class="fa-solid fa-utensils"></i></div>
+            <div class="action-info">
+              <h4>ORDER ONLINE</h4>
+              <p>Browse full menu & eat fresh</p>
+            </div>
+          </a>
+          <a href="reservations.html" class="action-card">
+            <div class="action-icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <div class="action-info">
+              <h4>RESERVE TABLE</h4>
+              <p>Book dining & VIP seating</p>
+            </div>
+          </a>
+          <a href="menu.html?delivery=true" class="action-card">
+            <div class="action-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <div class="action-info">
+              <h4>FAST DELIVERY</h4>
+              <p>Direct to your home or office</p>
+            </div>
+          </a>
+          <a href="contact.html#map-section" class="action-card">
+            <div class="action-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <div class="action-info">
+              <h4>GET DIRECTIONS</h4>
+              <p>Plot 14 Admiralty Way, Lekki</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: FEATURED MENU SECTION -->
+    <section class="featured-menu-section" style="padding: 20px 0 80px;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label"><i class="fa-solid fa-heart"></i> CHEF'S TOP RECOMMENDATIONS</span>
+          <h2 class="section-title">FAVORITES FROM OUR KITCHEN</h2>
+          <div class="red-divider-rule"><span class="red-divider-dot"></span></div>
+          <p class="section-subtitle">Popular dishes made to satisfy every craving, prepared fresh daily by our seasoned chefs.</p>
+        </div>
+
+        <div class="food-grid" id="home-featured-grid">
+          <!-- Populated dynamically by app.js from data.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 48px;">
+          <a href="menu.html" class="btn btn-outline btn-lg">
+            VIEW FULL MENU <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: MENU CATEGORIES & DYNAMIC FILTER -->
+    <section class="categories-section" style="padding: 70px 0; background: var(--bg-cream);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label"><i class="fa-solid fa-layer-group"></i> EXPLORE BY FLAVOR</span>
+          <h2 class="section-title">DISCOVER OUR CATEGORIES</h2>
+          <div class="red-divider-rule"><span class="red-divider-dot"></span></div>
+          <p class="section-subtitle">Select any category below to immediately browse our wide selection of Nigerian, African, and continental foods.</p>
+        </div>
+
+        <!-- Horizontal scrollable category bar -->
+        <div class="category-nav-wrapper">
+          <div class="category-scroll-track" id="home-category-filter">
+            <button class="cat-pill-btn active" data-category="all"><i class="fa-solid fa-border-all"></i> ALL</button>
+            <button class="cat-pill-btn" data-category="nigerian"><i class="fa-solid fa-bowl-food"></i> NIGERIAN</button>
+            <button class="cat-pill-btn" data-category="african"><i class="fa-solid fa-earth-africa"></i> AFRICAN</button>
+            <button class="cat-pill-btn" data-category="continental"><i class="fa-solid fa-utensils"></i> CONTINENTAL</button>
+            <button class="cat-pill-btn" data-category="rice-pasta"><i class="fa-solid fa-bowl-rice"></i> RICE & PASTA</button>
+            <button class="cat-pill-btn" data-category="chicken"><i class="fa-solid fa-drumstick-bite"></i> CHICKEN</button>
+            <button class="cat-pill-btn" data-category="beef"><i class="fa-solid fa-burger"></i> BEEF</button>
+            <button class="cat-pill-btn" data-category="seafood"><i class="fa-solid fa-fish"></i> SEAFOOD</button>
+            <button class="cat-pill-btn" data-category="soups"><i class="fa-solid fa-mug-hot"></i> SOUPS</button>
+            <button class="cat-pill-btn" data-category="snacks"><i class="fa-solid fa-cookie-bite"></i> SNACKS</button>
+            <button class="cat-pill-btn" data-category="drinks"><i class="fa-solid fa-glass-water"></i> DRINKS</button>
+            <button class="cat-pill-btn" data-category="desserts"><i class="fa-solid fa-ice-cream"></i> DESSERTS</button>
+          </div>
+        </div>
+
+        <!-- Filtered Grid -->
+        <div class="food-grid" id="home-category-grid">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: SPECIAL OFFER SECTION -->
+    <section class="special-offer-section">
+      <div class="container">
+        <div class="offer-banner-card">
+          <div class="offer-grid">
+            <div class="offer-content-side">
+              <span class="offer-pill"><i class="fa-solid fa-fire"></i> WEEKEND SPECIAL</span>
+              <h2 class="offer-title">The DAMSAM Feast Combo</h2>
+              <div class="offer-subtitle">Jollof Rice + Grilled Chicken + Golden Dodo + Chilled Drink</div>
+              <p class="offer-desc">
+                Treat yourself and your loved ones to our signature weekend feast box. Cooked with authentic firewood aroma and garnished with seasoned quarter grilled chicken and sweet plantains.
+              </p>
+
+              <ul class="offer-included-list">
+                <li><i class="fa-solid fa-circle-check"></i> 1x Smoky Party Jollof Rice</li>
+                <li><i class="fa-solid fa-circle-check"></i> 1x Herb-Basted Grilled Chicken</li>
+                <li><i class="fa-solid fa-circle-check"></i> 1x Golden Fried Plantain (Dodo)</li>
+                <li><i class="fa-solid fa-circle-check"></i> 1x Signature House Chapman</li>
+              </ul>
+
+              <div class="offer-pricing-bar">
+                <span class="offer-new-price">₦9,900</span>
+                <span class="offer-old-price">₦12,500</span>
+                <span class="offer-savings-tag">SAVE 21%</span>
+              </div>
+
+              <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="claimOfferCombo('offer-01')">
+                  <i class="fa-solid fa-bag-shopping"></i> ORDER NOW
+                </button>
+                <a href="offers.html" class="btn btn-outline">
+                  <i class="fa-solid fa-tags"></i> VIEW ALL OFFERS
+                </a>
+              </div>
+            </div>
+
+            <div class="offer-image-side">
+              <img src="assets/images/jollof-chicken.jpg" alt="DAMSAM Weekend Special Combo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: ABOUT SECTION -->
+    <section class="about-section">
+      <div class="container about-grid">
+        <div class="about-visual-stack">
+          <div class="about-img-main">
+            <img src="assets/images/about-dining.jpg" alt="DAMSAM Food Wurld Welcoming Dining Experience">
+          </div>
+          <div class="about-floating-experience">
+            <h3>Fresh</h3>
+            <p>Flavorful Daily</p>
+          </div>
+        </div>
+
+        <div class="about-content-side">
+          <span class="section-label"><i class="fa-solid fa-utensils"></i> ABOUT DAMSAM FOOD WURLD</span>
+          <h2>MORE THAN JUST A MEAL</h2>
+          <div class="red-divider-rule" style="margin-left: 0;"><span class="red-divider-dot"></span></div>
+          <p>
+            At DAMSAM Food Wurld, we bring together delicious flavors, quality ingredients and a welcoming dining experience. From local favorites to continental dishes, our menu is created for every kind of craving.
+          </p>
+          <p>
+            Whether you are sitting down for an intimate family dinner, catching up with colleagues over a hearty lunch, or having hot food delivered straight to your home or office, we ensure every plate is seasoned with passion and prepared under the highest hygiene standards.
           </p>
 
-          <div class="feature-pillars-list">
-            <div class="pillar-item">
-              <span class="pillar-num">01</span>
-              <div>
-                <h4 class="pillar-title" style="color: var(--color-cream);">Kiln-Dried African & European Hardwoods</h4>
-                <p class="pillar-desc" style="color: var(--text-light-muted);">
-                  Cured in climate-controlled kilns to ensure complete structural resilience against tropical humidity and seasonal shifts.
-                </p>
-              </div>
-            </div>
-
-            <div class="pillar-item">
-              <span class="pillar-num">02</span>
-              <div>
-                <h4 class="pillar-title" style="color: var(--color-cream);">Full-Grain Aniline & Saddle Leathers</h4>
-                <p class="pillar-desc" style="color: var(--text-light-muted);">
-                  Ethically sourced hides drum-dyed with natural waxes, preserving natural grain patterns that tell a story of tactile distinction.
-                </p>
-              </div>
-            </div>
-
-            <div class="pillar-item">
-              <span class="pillar-num">03</span>
-              <div>
-                <h4 class="pillar-title" style="color: var(--color-cream);">Monolithic Travertine & Calacatta Stone</h4>
-                <p class="pillar-desc" style="color: var(--text-light-muted);">
-                  Hand-cut stone slabs celebrating mineral veining, hand-honed by stonemasons to achieve a velvety matte tactile finish.
-                </p>
-              </div>
-            </div>
+          <div class="about-values-list">
+            <div class="value-item"><i class="fa-solid fa-circle-check"></i> Authentic Nigerian Firewood Jollof</div>
+            <div class="value-item"><i class="fa-solid fa-circle-check"></i> Fresh Ocean Seafood Daily</div>
+            <div class="value-item"><i class="fa-solid fa-circle-check"></i> Premium Continental Pastas & Grills</div>
+            <div class="value-item"><i class="fa-solid fa-circle-check"></i> Speedy Delivery in Lekki & Lagos</div>
           </div>
 
-          <div style="display: flex; gap: 1.2rem; margin-top: 1rem;">
-            <a href="about.html" class="btn btn-sand">Our Full Philosophy</a>
-            <a href="services.html" class="btn btn-outline-cream">Atelier Services</a>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <a href="about.html" class="btn btn-primary">OUR STORY</a>
+            <a href="menu.html" class="btn btn-outline-dark">EXPLORE MENU</a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==========================================================================
-       6. OSUN STATE SHOWROOM & WHITE-GLOVE EXPERIENCE
-       ========================================================================== -->
-  <section class="section-padding bg-sand">
-    <div class="container">
-      <div class="split-feature-grid" style="grid-template-columns: 1fr 1fr;">
-        <div class="split-feature-content">
-          <span class="section-eyebrow">PHYSICAL & DIGITAL SANCTUARY</span>
-          <h2 class="section-title">Visit Our Osun State Showroom</h2>
-          <p class="section-subtitle" style="margin-bottom: 2rem;">
-            Located in the serene GRA district of Osogbo, the Wonder Grand Showroom invites architects, interior decorators, and private collectors to immerse themselves in curated room vignettes.
-          </p>
+    <!-- SECTION 12: WHY CHOOSE US -->
+    <section class="why-us-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label"><i class="fa-solid fa-star"></i> OUR PROMISE TO YOU</span>
+          <h2 class="section-title">WHY CHOOSE US</h2>
+          <div class="red-divider-rule"><span class="red-divider-dot"></span></div>
+          <p class="section-subtitle">Experience restaurant hospitality and meal delivery designed around your cravings and lifestyle.</p>
+        </div>
 
-          <div class="contact-info-cards" style="margin-bottom: 2rem;">
-            <div class="contact-card-item">
-              <div class="contact-icon-box">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-card-title">Showroom Address</div>
-                <div class="contact-card-val">Plot 18 Heritage Boulevard, GRA, Osogbo, Osun State, Nigeria</div>
-              </div>
-            </div>
-
-            <div class="contact-card-item">
-              <div class="contact-icon-box">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-card-title">Opening Hours</div>
-                <div class="contact-card-val">Monday – Saturday: 9:00 AM – 7:00 PM<br><span style="font-size: 0.9rem; color: var(--color-taupe);">Sundays: Private Appointments Only</span></div>
-              </div>
-            </div>
+        <div class="why-us-grid">
+          <div class="why-card">
+            <div class="why-card-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3>QUALITY INGREDIENTS</h3>
+            <p>Fresh ingredients, prime beef cuts, clean vegetable oils and carefully prepared meals cooked to wholesome culinary standards.</p>
           </div>
 
-          <div style="display: flex; gap: 1.2rem;">
-            <a href="contact.html" class="btn btn-espresso">Book Showroom Tour</a>
-            <a href="https://wa.me/2348034009000?text=Hello%20Wonder%20Grand,%20I%20would%20like%20to%20schedule%20a%20private%20showroom%20viewing." target="_blank" rel="noopener" class="btn btn-outline-espresso">
-              WhatsApp Concierge
+          <div class="why-card">
+            <div class="why-card-icon"><i class="fa-solid fa-utensils"></i></div>
+            <h3>WIDE VARIETY</h3>
+            <p>Something delicious for every taste and craving — Nigerian soups, continental pastas, sizzling grills, pastries, drinks and desserts.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h3>EASY ORDERING</h3>
+            <p>Order your favorite meals online with ease, customize options, pay conveniently, and track your food in real-time.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card-icon"><i class="fa-solid fa-heart"></i></div>
+            <h3>WARM EXPERIENCE</h3>
+            <p>Enjoy great food in a welcoming, air-conditioned environment with courteous staff dedicated to your comfort.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 26: REVIEWS / TESTIMONIALS -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label"><i class="fa-solid fa-comment-dots"></i> DINER EXPERIENCES</span>
+          <h2 class="section-title">WHAT OUR CUSTOMERS SAY</h2>
+          <div class="red-divider-rule"><span class="red-divider-dot"></span></div>
+          <p class="section-subtitle">Real experiences from food lovers across Lagos who enjoy dining and ordering from DAMSAM Food Wurld.</p>
+        </div>
+
+        <div class="reviews-grid" id="home-reviews-grid">
+          <!-- Dynamically populated from data.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="contact.html#feedback-section" class="btn btn-outline">
+            <i class="fa-solid fa-pen-to-square"></i> Leave a Review
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 24: MAP & LOCATION CALLOUT -->
+    <section class="location-section" id="location-section">
+      <div class="container location-grid">
+        <div class="location-info-card">
+          <span class="section-label"><i class="fa-solid fa-location-dot"></i> VISIT OUR RESTAURANT</span>
+          <h3>Find DAMSAM Food Wurld</h3>
+          <div class="red-divider-rule" style="margin-left: 0; margin-bottom: 24px;"><span class="red-divider-dot"></span></div>
+          
+          <ul class="location-detail-list">
+            <li>
+              <i class="fa-solid fa-map-pin"></i>
+              <div>
+                <strong>Location & Address</strong>
+                <span>Plot 14, Admiralty Way, Lekki Phase 1, Lagos, Nigeria</span>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <strong>Direct Telephone & Reservations</strong>
+                <span><a href="tel:+2348034567890">+234 803 456 7890</a> / <a href="tel:+2349012345678">+234 901 234 5678</a></span>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Dining & Delivery Hours</strong>
+                <span>Monday – Thursday: 8:00 AM – 10:00 PM<br>Friday – Sunday: 8:00 AM – 11:30 PM</span>
+              </div>
+            </li>
+          </ul>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="https://maps.google.com/?q=Admiralty+Way+Lekki+Phase+1+Lagos" target="_blank" rel="noopener" class="btn btn-primary">
+              <i class="fa-solid fa-diamond-turn-right"></i> GET DIRECTIONS
+            </a>
+            <a href="reservations.html" class="btn btn-outline">
+              <i class="fa-solid fa-calendar-check"></i> BOOK A TABLE
             </a>
           </div>
         </div>
 
-        <div class="split-feature-img-box">
-          <img src="assets/images/about-atelier.jpg" alt="Wonder Grand Osun State Showroom Interior" class="split-feature-img">
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7276332159045!2d3.470557474992147!3d6.441846993549448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf453c235be6b%3A0xc3b8a3e7ebba569!2sAdmiralty%20Way%2C%20Lekki%20Phase%20I%2C%20Lekki%2C%20Lagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" 
+            title="DAMSAM Food Wurld Location on Map"
+            loading="lazy">
+          </iframe>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ==========================================================================
-       7. ARCHITECTURAL REVIEWS & TESTIMONIALS
-       ========================================================================== */ -->
-  <section class="section-padding bg-cream">
+  <!-- RED BANNER FOOTER TOP (Reference Menu Inspired) -->
+  <div class="footer-top-red-band">
     <div class="container">
-      <div class="section-header-editorial">
-        <span class="section-eyebrow">PATRON ACCLAIM</span>
-        <h2 class="section-title">Words from Connoisseurs</h2>
-        <p class="section-subtitle">
-          Trusted by Nigeria's leading residential architects, interior designers, and discerning homeowners.
-        </p>
+      <div class="red-band-text">
+        <h3>Craving something delicious right now?</h3>
+        <p>Order online for prompt doorstep delivery or reserve your table for a memorable dining experience.</p>
+      </div>
+      <div style="display: flex; gap: 14px;">
+        <a href="menu.html" class="btn btn-light"><i class="fa-solid fa-utensils"></i> Order Online</a>
+        <a href="tel:+2348034567890" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 27: FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-main-grid">
+      <!-- Col 1: Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="site-logo">
+          <span class="logo-main" style="color: #FFFFFF;">DAMSAM</span>
+          <span class="logo-sub">FOOD WURLD</span>
+        </a>
+        <p>Good food. Great moments. Discover the rich tastes of Nigerian, African and continental cuisine prepared fresh with heart and quality.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/damsamfoodwurld" class="social-circle-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com/damsamfoodwurld" class="social-circle-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://tiktok.com/@damsamfoodwurld" class="social-circle-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/2348034567890" class="social-circle-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem;">
-        <div style="background: var(--bg-card); padding: 2.8rem; border: 1px solid var(--border-light); border-radius: var(--radius-sm); box-shadow: var(--shadow-subtle);">
-          <div style="color: var(--accent-gold); font-size: 1.2rem; margin-bottom: 1.2rem;">★★★★★</div>
-          <p style="font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.6; color: var(--color-espresso); margin-bottom: 1.5rem; font-style: italic;">
-            "Wonder Grand's Monolith Travertine table anchored our Ikoyi penthouse project with timeless sculptural weight. Their white-glove delivery team arrived precisely on schedule and handled every piece like fine art."
-          </p>
-          <div style="border-top: 1px solid var(--border-light); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-            <strong style="font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-espresso);">Arc. Adebayo Adeleke</strong>
-            <span style="font-size: 0.78rem; color: var(--color-taupe); text-transform: uppercase;">Principal Architect, Lagos</span>
-          </div>
-        </div>
+      <!-- Col 2: Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Photo Gallery</a></li>
+          <li><a href="offers.html">Special Offers</a></li>
+          <li><a href="reservations.html">Table Reservations</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
 
-        <div style="background: var(--bg-card); padding: 2.8rem; border: 1px solid var(--border-light); border-radius: var(--radius-sm); box-shadow: var(--shadow-subtle);">
-          <div style="color: var(--accent-gold); font-size: 1.2rem; margin-bottom: 1.2rem;">★★★★★</div>
-          <p style="font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.6; color: var(--color-espresso); margin-bottom: 1.5rem; font-style: italic;">
-            "Visiting their Osun State atelier opened our eyes to the level of joinery being executed right here in Nigeria. The leather sling chair is not only ergonomic perfection, it has become our family's favorite heirloom."
-          </p>
-          <div style="border-top: 1px solid var(--border-light); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-            <strong style="font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-espresso);">Dr. Folashade Oladipo</strong>
-            <span style="font-size: 0.78rem; color: var(--color-taupe); text-transform: uppercase;">Private Collector, Osogbo</span>
-          </div>
-        </div>
+      <!-- Col 3: Customer Care -->
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul class="footer-links-list">
+          <li><a href="menu.html">Order Online</a></li>
+          <li><a href="track-order.html">Track Your Order</a></li>
+          <li><a href="menu.html?category=nigerian">Nigerian Dishes</a></li>
+          <li><a href="menu.html?category=continental">Continental Meals</a></li>
+          <li><a href="offers.html">Weekend Deals</a></li>
+          <li><a href="contact.html#feedback-section">Customer Reviews</a></li>
+        </ul>
+      </div>
 
-        <div style="background: var(--bg-card); padding: 2.8rem; border: 1px solid var(--border-light); border-radius: var(--radius-sm); box-shadow: var(--shadow-subtle);">
-          <div style="color: var(--accent-gold); font-size: 1.2rem; margin-bottom: 1.2rem;">★★★★★</div>
-          <p style="font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.6; color: var(--color-espresso); margin-bottom: 1.5rem; font-style: italic;">
-            "The customized smoked oak dining suite they crafted for our estate in Abuja surpassed Italian imports we previously considered. Extraordinary warmth, flawless joinery, and unmatched personal concierge care."
-          </p>
-          <div style="border-top: 1px solid var(--border-light); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
-            <strong style="font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-espresso);">Engr. Babatunde Lawal</strong>
-            <span style="font-size: 0.78rem; color: var(--color-taupe); text-transform: uppercase;">Residential Client, Abuja</span>
+      <!-- Col 4: Opening Hours & Contact -->
+      <div class="footer-col">
+        <h4>Contact & Hours</h4>
+        <div style="font-size: 0.9rem; color: #D6D3D1; display: flex; flex-direction: column; gap: 10px;">
+          <div><i class="fa-solid fa-location-dot" style="color: var(--primary-red); margin-right: 8px;"></i> Plot 14, Admiralty Way, Lekki Phase 1, Lagos</div>
+          <div><i class="fa-solid fa-phone" style="color: var(--primary-red); margin-right: 8px;"></i> +234 803 456 7890</div>
+          <div><i class="fa-solid fa-envelope" style="color: var(--primary-red); margin-right: 8px;"></i> orders@damsamfoodwurld.com</div>
+          <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.1);">
+            <strong>Hours:</strong> Mon – Sun: 8:00 AM – 10:30 PM
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ==========================================================================
-       8. GLOBAL FOOTER
-       ========================================================================== -->
-  <footer class="footer-main">
-    <div class="container-wide">
-      <div class="footer-top">
-        <!-- Brand Info -->
-        <div class="footer-col-brand">
-          <a href="index.html" class="brand-logo" style="margin-bottom: 1.5rem;">
-            <div class="brand-monogram">WG</div>
-            <div class="brand-text">
-              <span class="brand-name" style="color: var(--color-cream);">WONDER GRAND</span>
-              <span class="brand-sub">HAUTE FURNITURE • OSUN STATE</span>
-            </div>
-          </a>
-          <p class="footer-desc">
-            An international luxury furniture and interior lifestyle atelier based in Osun State, Nigeria. We craft timeless architectural furniture and curated accessories that define extraordinary living.
-          </p>
-          <div style="font-size: 0.85rem; color: var(--color-sand); line-height: 1.6;">
-            <strong>Atelier Address:</strong> Plot 18 Heritage Boulevard, GRA, Osogbo, Osun State, Nigeria<br>
-            <strong>Concierge:</strong> +234 (0) 803 400 9000 • concierge@wondergrand.com
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="footer-heading">Navigation</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Wonder Grand</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="contact.html">Contact & Showroom</a></li>
-            <li><a href="#collectionsSection">Online Catalog</a></li>
-          </ul>
-        </div>
-
-        <!-- Furniture Categories -->
-        <div>
-          <h4 class="footer-heading">Collections</h4>
-          <ul class="footer-links">
-            <li><a href="#collectionsSection">Living Room Furniture</a></li>
-            <li><a href="#collectionsSection">Bedroom Suites</a></li>
-            <li><a href="#collectionsSection">Dining Room Furniture</a></li>
-            <li><a href="#collectionsSection">Executive Office Furniture</a></li>
-            <li><a href="#collectionsSection">Outdoor Resort Living</a></li>
-            <li><a href="#collectionsSection">Luxury Interior Accessories</a></li>
-          </ul>
-        </div>
-
-        <!-- Newsletter & Concierge -->
-        <div>
-          <h4 class="footer-heading">The Grand Gazette</h4>
-          <p style="font-size: 0.88rem; color: var(--text-light-muted); margin-bottom: 1rem; line-height: 1.6;">
-            Receive private exhibition invitations, seasonal architectural catalogues, and bespoke commission releases.
-          </p>
-          <form class="footer-newsletter-form">
-            <input type="email" placeholder="Your email address" class="footer-input" required>
-            <button type="submit" class="btn btn-sm btn-walnut" style="padding: 0 1.4rem;">Join</button>
-          </form>
-          <div style="margin-top: 1.8rem; display: flex; gap: 1rem;">
-            <a href="https://instagram.com" target="_blank" rel="noopener" style="color: var(--color-sand); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em;">Instagram</a>
-            <span style="color: rgba(228, 213, 189, 0.4);">•</span>
-            <a href="https://pinterest.com" target="_blank" rel="noopener" style="color: var(--color-sand); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em;">Pinterest</a>
-            <span style="color: rgba(228, 213, 189, 0.4);">•</span>
-            <a href="https://linkedin.com" target="_blank" rel="noopener" style="color: var(--color-sand); font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.1em;">LinkedIn</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div>
-          © 2026 WONDER GRAND Haute Living Ltd. All rights reserved. Registered in Nigeria.
-        </div>
-        <div style="display: flex; gap: 1.8rem;">
-          <a href="#" style="color: var(--text-light-muted);">Privacy Policy</a>
-          <a href="#" style="color: var(--text-light-muted);">White-Glove Terms</a>
-          <a href="#" style="color: var(--text-light-muted);">Warranty Guidelines</a>
+    <!-- Bottom Copyright -->
+    <div class="footer-bottom-bar">
+      <div class="container">
+        <div>© 2026 DAMSAM Food Wurld. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ==========================================================================
-       9. SHOPPING CART DRAWER
-       ========================================================================== -->
-  <div class="slide-drawer" id="cartDrawer" aria-label="Shopping Cart Drawer">
-    <div class="drawer-header">
-      <h3 class="drawer-title">Curated Cart</h3>
-      <button class="close-drawer-btn" aria-label="Close cart">&times;</button>
-    </div>
-    <div class="drawer-body">
-      <div class="drawer-empty-state" id="cartEmptyState">
-        <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-        </svg>
-        <h4 class="empty-title">Your Collection is Empty</h4>
-        <p class="empty-sub">Explore our handcrafted furniture and accessories to begin curating your space.</p>
-        <a href="#collectionsSection" class="btn btn-sm btn-walnut close-drawer-btn">Explore Portfolio</a>
-      </div>
-      <div id="cartItemsList"></div>
-    </div>
-    <div class="drawer-footer" id="cartDrawerFooter">
-      <div class="summary-row">
-        <span>Subtotal</span>
-        <span id="cartSubtotalAmount">₦0</span>
-      </div>
-      <div class="summary-row">
-        <span>Delivery (Osun & Nationwide)</span>
-        <span id="cartDeliveryFee">₦45,000</span>
-      </div>
-      <div class="summary-row total-row">
-        <span>Estimated Investment</span>
-        <span id="cartTotalAmount">₦0</span>
-      </div>
-      <button class="btn btn-espresso w-100" id="proceedToCheckoutBtn" style="width: 100%;">
-        Proceed to Private Checkout
-      </button>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       10. WISHLIST DRAWER
-       ========================================================================== -->
-  <div class="slide-drawer" id="wishlistDrawer" aria-label="Wishlist Drawer">
-    <div class="drawer-header">
-      <h3 class="drawer-title">Private Wishlist</h3>
-      <button class="close-drawer-btn" aria-label="Close wishlist">&times;</button>
-    </div>
-    <div class="drawer-body">
-      <div class="drawer-empty-state" id="wishlistEmptyState">
-        <svg class="empty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-        </svg>
-        <h4 class="empty-title">No Saved Masterpieces</h4>
-        <p class="empty-sub">Save your favorite furniture pieces to review with your architect or interior designer.</p>
-      </div>
-      <div id="wishlistItemsList"></div>
-    </div>
-  </div>
-
-  <!-- Drawer & Modal Backdrop Overlay -->
-  <div class="drawer-backdrop" id="drawerBackdrop"></div>
-
-  <!-- ==========================================================================
-       11. MOBILE NAVIGATION DRAWER
-       ========================================================================== -->
-  <div class="slide-drawer" id="mobileNavDrawer" style="max-width: 340px;">
-    <div class="drawer-header">
-      <div class="brand-text">
-        <span class="brand-name" style="font-size: 1.15rem;">WONDER GRAND</span>
-        <span class="brand-sub">OSUN STATE</span>
-      </div>
-      <button class="close-drawer-btn" id="closeMobileNavBtn" aria-label="Close Menu">&times;</button>
-    </div>
-    <div class="drawer-body" style="padding-top: 2rem;">
-      <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.6rem;">
-        <li><a href="index.html" style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-espresso); font-weight: 500;">Home</a></li>
-        <li><a href="about.html" style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-espresso); font-weight: 500;">About Us</a></li>
-        <li><a href="services.html" style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-espresso); font-weight: 500;">Our Services</a></li>
-        <li><a href="contact.html" style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-espresso); font-weight: 500;">Contact Us</a></li>
-        <li><a href="#collectionsSection" style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-walnut); font-weight: 500;">Browse Catalog</a></li>
-      </ul>
-      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-light);">
-        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Showroom Concierge:</p>
-        <a href="tel:+2348034009000" style="display: block; font-weight: 600; color: var(--color-espresso); margin-bottom: 0.5rem;">+234 (0) 803 400 9000</a>
-        <a href="mailto:concierge@wondergrand.com" style="display: block; font-size: 0.85rem; color: var(--color-walnut);">concierge@wondergrand.com</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       12. QUICK VIEW MODAL
-       ========================================================================== -->
-  <div class="modal-overlay" id="quickViewModal">
-    <div class="modal-card">
-      <button class="close-modal-btn" aria-label="Close Quick View">&times;</button>
-      <div class="modal-content-inner">
-        <!-- Rendered dynamically by window.wonderGrandShop.openQuickView() -->
-      </div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       13. PRIVATE CHECKOUT MODAL
-       ========================================================================== -->
-  <div class="modal-overlay" id="checkoutModal">
-    <div class="modal-card" style="max-width: 780px;">
-      <button class="close-modal-btn" aria-label="Close Checkout">&times;</button>
-      <div class="form-grid-modal">
-        <div class="form-header-modal">
-          <span class="section-eyebrow">ORDER FINALIZATION</span>
-          <h2 class="form-title-modal">Private Client Checkout</h2>
-          <p class="form-sub-modal">Complete your acquisition details for bespoke white-glove dispatch.</p>
-        </div>
-
-        <!-- Order Summary Review -->
-        <div class="checkout-summary-box">
-          <h4 style="font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 0.8rem; color: var(--color-espresso);">Acquisition Summary</h4>
-          <div id="checkoutSummaryItems"></div>
-          <div class="summary-row" style="margin-top: 0.8rem;">
-            <span>Subtotal:</span>
-            <span id="checkoutSubtotal">₦0</span>
-          </div>
-          <div class="summary-row">
-            <span>White-Glove Delivery & Assembly:</span>
-            <span id="checkoutDelivery">₦45,000</span>
-          </div>
-          <div class="summary-row total-row" style="margin-bottom: 0;">
-            <span>Total Investment:</span>
-            <span id="checkoutTotal">₦0</span>
-          </div>
-        </div>
-
-        <form id="checkoutForm">
-          <div class="form-row-2">
-            <div class="form-group">
-              <label class="form-label">Full Name *</label>
-              <input type="text" name="fullName" class="form-input" required placeholder="e.g. Chief Adeleke Johnson">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email Address *</label>
-              <input type="email" name="email" class="form-input" required placeholder="adeleke@domain.com">
-            </div>
-          </div>
-
-          <div class="form-row-2">
-            <div class="form-group">
-              <label class="form-label">Phone / WhatsApp *</label>
-              <input type="tel" name="phone" class="form-input" required placeholder="+234 803 000 0000">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Delivery Destination (City / State) *</label>
-              <select name="city" class="form-select" required>
-                <option value="Osogbo, Osun State">Osogbo (Osun State)</option>
-                <option value="Ile-Ife, Osun State">Ile-Ife (Osun State)</option>
-                <option value="Ilesa, Osun State">Ilesa (Osun State)</option>
-                <option value="Ede, Osun State">Ede (Osun State)</option>
-                <option value="Lagos State (Ikoyi, VI, Lekki, Ikeja)">Lagos State (White-Glove Transit)</option>
-                <option value="Abuja FCT (Maitama, Asokoro, Guzape)">Abuja FCT (White-Glove Transit)</option>
-                <option value="Ibadan, Oyo State">Ibadan, Oyo State</option>
-                <option value="Other Nigerian State (Atelier Transit)">Other Nigerian State</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Street / Estate Address *</label>
-            <input type="text" name="address" class="form-input" required placeholder="House number, Street name, Estate / Landmark">
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Payment Preference</label>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.5rem;">
-              <label style="display: flex; align-items: center; gap: 0.6rem; padding: 0.8rem; background: var(--bg-card-warm); border: 1px solid var(--border-light); border-radius: var(--radius-xs); cursor: pointer;">
-                <input type="radio" name="paymentMethod" value="transfer" checked>
-                <span style="font-size: 0.85rem; font-weight: 500;">Official Bank Wire / Transfer</span>
-              </label>
-              <label style="display: flex; align-items: center; gap: 0.6rem; padding: 0.8rem; background: var(--bg-card-warm); border: 1px solid var(--border-light); border-radius: var(--radius-xs); cursor: pointer;">
-                <input type="radio" name="paymentMethod" value="card">
-                <span style="font-size: 0.85rem; font-weight: 500;">Card / Showroom POS Terminal</span>
-              </label>
-            </div>
-          </div>
-
-          <button type="submit" class="btn btn-espresso w-100" style="width: 100%; margin-top: 1rem;">
-            Confirm Acquisition Order
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       14. ORDER SUCCESS CONFIRMATION MODAL
-       ========================================================================== -->
-  <div class="modal-overlay" id="orderSuccessModal">
-    <div class="modal-card" style="max-width: 600px; text-align: center; padding: 3.5rem 2.5rem;">
-      <button class="close-modal-btn" aria-label="Close Confirmation">&times;</button>
-      <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--bg-secondary); border: 2px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; color: var(--accent-gold);">
-        <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-      </div>
-      <span class="section-eyebrow">ACQUISITION RECEIVED</span>
-      <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-espresso); margin-bottom: 0.8rem;">
-        Thank You, <span id="orderSuccessName">Esteemed Client</span>
-      </h2>
-      <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 2rem;">
-        Your acquisition order reference is <strong id="orderSuccessRef" style="color: var(--color-espresso); letter-spacing: 0.05em;">WG-109244</strong>. Total amount: <strong id="orderSuccessTotal">₦0</strong> for delivery to <span id="orderSuccessCity">Osun State</span>. Our showroom manager will contact you momentarily with dispatch scheduling and invoice confirmation.
-      </p>
-      <div style="display: flex; justify-content: center; gap: 1rem;">
-        <button class="btn btn-espresso close-modal-btn">Return to Showroom</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       15. BESPOKE COMMISSION & CONSULTATION MODAL
-       ========================================================================== -->
-  <div class="modal-overlay" id="enquiryModal">
-    <div class="modal-card" style="max-width: 680px;">
-      <button class="close-modal-btn" aria-label="Close Consultation">&times;</button>
-      <div class="form-grid-modal">
-        <div class="form-header-modal">
-          <span class="section-eyebrow">BESPOKE ATELIER</span>
-          <h2 class="form-title-modal">Private Consultation</h2>
-          <p class="form-sub-modal">Meet with our architectural design team in Osun State or schedule an on-site residence consultation.</p>
-        </div>
-
-        <form id="consultationForm">
-          <div class="form-row-2">
-            <div class="form-group">
-              <label class="form-label">Your Name *</label>
-              <input type="text" name="name" class="form-input" required placeholder="Architect / Client Name">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Phone / WhatsApp *</label>
-              <input type="tel" name="phone" class="form-input" required placeholder="+234 803 000 0000">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Service Required *</label>
-            <select name="serviceType" class="form-select" required>
-              <option value="Bespoke Furniture Commission">Custom Furniture Design & Commission</option>
-              <option value="Interior Design and Styling">Comprehensive Interior Design & Styling</option>
-              <option value="Private Showroom Tour">Private Osun State Showroom Tour</option>
-              <option value="Architectural Blueprint Consultation">Architectural Blueprint & Sourcing Consultation</option>
-              <option value="Luxury Interior Accessories">Curated Accessories & Lighting Package</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Project Details / Vision</label>
-            <textarea name="notes" class="form-textarea" rows="4" placeholder="Describe your room dimensions, aesthetic preferences, timeline, or wood finishes..."></textarea>
-          </div>
-
-          <button type="submit" class="btn btn-espresso w-100" style="width: 100%;">
-            Send Consultation Request
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       16. LIVE SEARCH OVERLAY
-       ========================================================================== -->
-  <div class="search-overlay" id="searchOverlay">
-    <button class="close-search-btn" id="closeSearchBtn" aria-label="Close Search">&times;</button>
-    <div class="search-container-inner">
-      <span class="section-eyebrow" style="color: var(--color-sand);">SEARCH CATALOG</span>
-      <input type="text" id="searchInput" class="search-input-field" placeholder="Search by name, wood, leather, stone..." autocomplete="off">
-      <div class="search-results-list" id="searchResultsList"></div>
-    </div>
-  </div>
-
-  <!-- ==========================================================================
-       17. WHATSAPP FLOATING CONCIERGE BUTTON
-       ========================================================================== -->
-  <a href="https://wa.me/2348034009000?text=Hello%20Wonder%20Grand,%20I%20am%20browsing%20your%20luxury%20furniture%20website%20and%20would%20like%20to%20inquire." target="_blank" rel="noopener" class="whatsapp-floater" aria-label="Chat on WhatsApp with Showroom Concierge">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-      <path d="M12.031 2C6.495 2 2 6.495 2 12.031c0 1.968.568 3.864 1.644 5.485L2 22l4.63-1.602c1.56.96 3.376 1.467 5.401 1.467 5.536 0 10.031-4.495 10.031-10.034C22.062 6.495 17.567 2 12.031 2zm0 18.232c-1.748 0-3.376-.484-4.783-1.321l-.343-.205-3.529 1.222 1.246-3.44-.224-.356c-.955-1.523-1.46-3.298-1.46-5.099 0-4.484 3.65-8.134 8.135-8.134 4.485 0 8.135 3.65 8.135 8.134 0 4.485-3.65 8.134-8.135 8.134zm4.462-6.103c-.244-.122-1.446-.714-1.67-.796-.224-.082-.387-.122-.55.122-.163.244-.63 0.796-.773.959-.143.163-.285.184-.53.061-.244-.122-1.03-.38-1.962-1.21-.726-.647-1.216-1.447-1.359-1.691-.143-.244-.015-.376.107-.498.11-.11.244-.285.367-.428.122-.143.163-.244.244-.407.082-.163.041-.306-.02-.428-.061-.122-.55-1.326-.754-1.815-.199-.477-.4-.412-.55-.42-.142-.008-.306-.01-.469-.01-.163 0-.428.061-.652.306-.224.244-.856.836-.856 2.039s.876 2.365 1 2.529c.122.163 1.724 2.632 4.176 3.69 2.453 1.059 2.453.706 2.894.665.441-.041 1.446-.591 1.65-1.162.204-.571.204-1.06.143-1.162-.061-.102-.224-.163-.469-.285z"/>
-    </svg>
-    <span>WhatsApp Concierge</span>
+  <!-- SECTION 25: FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/2348034567890?text=Hello%20DAMSAM%20Food%20Wurld,%20I%20would%20like%20to%20place%20an%20order" 
+     class="floating-whatsapp-btn" 
+     target="_blank" 
+     rel="noopener" 
+     aria-label="Chat with DAMSAM Food Wurld on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Chat with us</span>
   </a>
 
-  <!-- JavaScript Libraries -->
+  <!-- SECTION 15: SHOPPING CART DRAWER -->
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <h3><i class="fa-solid fa-bag-shopping" style="color: var(--primary-red);"></i> Your Plate</h3>
+      <button class="close-drawer-btn" aria-label="Close cart">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <div id="cart-drawer-items-list" class="cart-items-list">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer">
+      <!-- Coupon Code Input -->
+      <div style="display: flex; gap: 8px; margin-bottom: 16px;">
+        <input type="text" id="drawer-coupon-input" class="form-control" placeholder="Promo code (e.g. DAMSAM10)" style="padding: 9px 12px; font-size: 0.85rem;">
+        <button id="drawer-apply-coupon" class="btn btn-outline btn-sm">Apply</button>
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <strong id="drawer-subtotal">₦0</strong>
+      </div>
+      <div class="cart-summary-line">
+        <span>Estimated Delivery</span>
+        <strong id="drawer-delivery">₦1,500</strong>
+      </div>
+      <div class="cart-summary-line" id="drawer-discount-row" style="display: none; color: var(--success-green);">
+        <span>Discount</span>
+        <strong id="drawer-discount">-₦0</strong>
+      </div>
+      <div class="cart-summary-line total">
+        <span>Total</span>
+        <span class="total-amount" id="drawer-total">₦0</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 16px;">
+        <a href="checkout.html" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-lock"></i> PROCEED TO CHECKOUT
+        </a>
+        <button class="btn btn-light btn-block continue-shopping-btn">
+          CONTINUE SHOPPING
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- SECTION 14: FOOD DETAIL CUSTOMIZATION MODAL -->
+  <div class="modal-overlay food-modal-overlay">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" aria-label="Close modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-body">
+        <div class="modal-media">
+          <img id="modal-img" src="" alt="Food Item">
+        </div>
+
+        <div class="modal-content-details">
+          <span class="modal-category" id="modal-cat">CATEGORY</span>
+          <h2 class="modal-title" id="modal-title">Dish Title</h2>
+          
+          <div class="modal-price-bar">
+            <span class="modal-price" id="modal-price">₦0</span>
+          </div>
+
+          <p class="modal-desc" id="modal-desc">Dish description will appear here.</p>
+
+          <!-- Addons -->
+          <div class="addons-header">CUSTOMIZE YOUR DISH</div>
+          <div id="modal-addons-list">
+            <!-- Addons checkboxes populated dynamically -->
+          </div>
+
+          <!-- Special instructions -->
+          <div style="margin-top: 14px;">
+            <label for="modal-instructions" style="font-size: 0.8rem; font-weight: 700; color: var(--secondary-charcoal);">
+              SPECIAL INSTRUCTIONS (OPTIONAL)
+            </label>
+            <textarea id="modal-instructions" class="instructions-area" placeholder="e.g. Please make it mildly spiced, extra sauce on the side..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-qty-counter">
+          <button class="qty-btn" id="modal-dec-qty">-</button>
+          <span class="qty-value" id="modal-qty-val" style="padding: 0 12px;">1</span>
+          <button class="qty-btn" id="modal-inc-qty">+</button>
+        </div>
+
+        <button class="btn btn-primary" id="modal-add-to-cart-btn">
+          <i class="fa-solid fa-bag-shopping"></i> ADD TO PLATE
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script src="assets/js/data.js"></script>
-  <script src="assets/js/cart.js"></script>
-  <script src="assets/js/slider.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
